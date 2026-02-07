@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Claw MENA | Managed Browser Automation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
+        
+        .claw-gradient {
+            background: linear-gradient(135deg, #34d399 0%, #0891b2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .grid-bg {
+            background-image: linear-gradient(to right, #1f2937 1px, transparent 1px),
+                            linear-gradient(to bottom, #1f2937 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-300 min-h-screen selection:bg-emerald-500 selection:text-black">
+
+    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto">
+        <div class="font-bold text-xl tracking-tighter text-white">
+            claw<span class="text-emerald-500">.ae</span>
+        </div>
+        <a href="#contact" class="text-sm font-medium hover:text-white transition-colors">Contact Sales</a>
+    </nav>
+
+    <main class="relative pt-20 pb-32 px-6">
+        <div class="absolute inset-0 grid-bg opacity-20 z-0 pointer-events-none"></div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-900/30 border border-emerald-500/30 text-emerald-400 text-xs font-semibold mb-8 uppercase tracking-wide">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+                </span>
+                Now available in UAE & KSA Zones
+            </div>
+
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                Managed Browser Automation <br>
+                <span class="claw-gradient">for the Middle East.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Deploy <strong>Open Claw</strong> instances on local infrastructure. <br>
+                Scrape local data with residential MENA IPs. Zero blocking. Zero config.
+            </p>
+
+            <div class="flex flex-col md:flex-row gap-4 justify-center items-center">
+                <a href="#contact" class="bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-4 px-8 rounded-lg transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.2)] w-full md:w-auto text-center">
+                    Request Access
+                </a>
+                <span class="text-sm text-gray-500">Includes 100 free credits</span>
+            </div>
+        </div>
+    </main>
+
+    <section class="bg-gray-900/50 border-y border-gray-800 py-24 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-emerald-500 text-2xl">
+                    🌍
+                </div>
+                <h3 class="text-xl font-bold text-white">Local Residency</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Don't get blocked by Noon, Amazon.ae, or Gov portals. Our instances route through residential IPs in Dubai and Riyadh.
+                </p>
+            </div>
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-emerald-500 text-2xl">
+                    ⚡
+                </div>
+                <h3 class="text-xl font-bold text-white">Managed Open Claw</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Skip the DevOps. We host the latest Open Claw version with auto-scaling, health checks, and automatic updates.
+                </p>
+            </div>
+            <div class="space-y-4">
+                <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center text-emerald-500 text-2xl">
+                    🛡️
+                </div>
+                <h3 class="text-xl font-bold text-white">Data Sovereignty</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Your data never leaves the region. Compliant with UAE & KSA data protection regulations. Enterprise-ready.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 text-center">
+        <h2 class="text-3xl font-bold text-white mb-12">Simple Pricing</h2>
+        <div class="flex flex-wrap justify-center gap-6">
+            <div class="bg-gray-900 border border-gray-800 rounded-2xl p-8 w-full max-w-sm hover:border-emerald-500/50 transition-colors text-left">
+                <h3 class="text-lg font-medium text-gray-400 mb-2">Hobby</h3>
+                <div class="text-4xl font-bold text-white mb-6">99 AED<span class="text-sm text-gray-500 font-normal">/mo</span></div>
+                <ul class="space-y-3 mb-8 text-gray-400 text-sm">
+                    <li class="flex gap-2">✓ 5 Concurrent Sessions</li>
+                    <li class="flex gap-2">✓ UAE IP Pool</li>
+                    <li class="flex gap-2">✓ Community Support</li>
+                </ul>
+                <a href="#contact" class="block w-full py-3 rounded-lg border border-gray-700 text-center text-white hover:bg-gray-800 transition-all">Join Waitlist</a>
+            </div>
+             <div class="bg-gray-900 border border-emerald-500/30 rounded-2xl p-8 w-full max-w-sm relative text-left">
+                <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-emerald-500 text-black text-xs font-bold px-3 py-1 rounded-full uppercase">Most Popular</div>
+                <h3 class="text-lg font-medium text-emerald-400 mb-2">Growth</h3>
+                <div class="text-4xl font-bold text-white mb-6">299 AED<span class="text-sm text-gray-500 font-normal">/mo</span></div>
+                <ul class="space-y-3 mb-8 text-gray-400 text-sm">
+                    <li class="flex gap-2 text-white">✓ 25 Concurrent Sessions</li>
+                    <li class="flex gap-2 text-white">✓ UAE & KSA Residential IPs</li>
+                    <li class="flex gap-2 text-white">✓ API Access</li>
+                </ul>
+                <a href="#contact" class="block w-full py-3 rounded-lg bg-emerald-600 text-center text-white hover:bg-emerald-500 transition-all font-bold">Join Waitlist</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="max-w-xl mx-auto py-24 px-6">
+        <div class="bg-gray-900/80 backdrop-blur-md border border-gray-800 rounded-2xl p-8">
+            <h2 class="text-2xl font-bold text-white mb-6 text-center">Request Early Access</h2>
+            
+            <form class="space-y-4" onsubmit="event.preventDefault(); alert('Thanks! We will reach out shortly.');">
+                <div>
+                    <label class="block text-xs font-medium text-gray-500 mb-1 uppercase">Work Email</label>
+                    <input type="email" placeholder="name@company.com" class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition-colors" required>
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-medium text-gray-500 mb-1 uppercase">What are you building?</label>
+                    <select class="w-full bg-black/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-emerald-500 transition-colors">
+                        <option>Web Scraping / Data Extraction</option>
+                        <option>E-commerce Price Monitoring</option>
+                        <option>Social Media Automation</option>
+                        <option>Testing / QA</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-medium text-gray-500 mb-1 uppercase">Target Region</label>
+                    <div class="flex gap-4">
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="region" class="accent-emerald-500" checked> <span class="text-gray-300">UAE</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="region" class="accent-emerald-500"> <span class="text-gray-300">Saudi Arabia</span>
+                        </label>
+                        <label class="flex items-center gap-2 cursor-pointer">
+                            <input type="radio" name="region" class="accent-emerald-500"> <span class="text-gray-300">Global</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-emerald-500 hover:bg-emerald-400 text-black font-bold py-4 rounded-lg mt-4 transition-all">
+                    Get Invite
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="border-t border-gray-900 py-12 text-center text-gray-600 text-sm">
+        &copy; 2026 Open Claw MENA. Operating under Dubai Internet City regulations.
+    </footer>
+
+</body>
+</html>
