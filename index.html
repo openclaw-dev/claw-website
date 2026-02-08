@@ -3,113 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Claw Cloud | Deploy OpenClaw in 1 Minute</title>
+    <title>Claw | Automated Data Infrastructure</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <script src="https://unpkg.com/lucide@latest"></script>
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@500;700&display=swap');
         
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.05);
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; }
+        
+        /* Glassmorphism */
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .gradient-text {
-            background: linear-gradient(to right, #ffffff, #9ca3af);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        
+        /* Animations */
+        @keyframes fade-in-up {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
+        .animate-fade-in { animation: fade-in-up 0.8s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
     </style>
 </head>
-<body class="bg-black text-white min-h-screen antialiased selection:bg-orange-500 selection:text-white">
+<body class="bg-black text-gray-300 min-h-screen selection:bg-emerald-500 selection:text-black antialiased overflow-x-hidden">
 
-    <nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex justify-between items-center">
-            <div class="flex items-center gap-2 font-bold text-xl tracking-tight">
-                <div class="w-8 h-8 bg-orange-500 rounded-lg flex items-center justify-center text-black">
-                    <i data-lucide="bot" class="w-5 h-5"></i>
-                </div>
-                Claw Cloud
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+            <div class="font-bold text-2xl tracking-tighter text-white">
+                claw<span class="text-emerald-500">.ae</span>
             </div>
-            <a href="#" class="text-sm text-gray-400 hover:text-white transition-colors">Contact Support</a>
-        </div>
-    </nav>
-
-    <main class="pt-32 pb-20 px-6 text-center max-w-4xl mx-auto">
-        
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 text-xs font-medium mb-8">
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-500"></span>
-            </span>
-            Limited cloud servers — only 9 left
-        </div>
-
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">
-            Deploy OpenClaw <br />
-            <span class="text-orange-500">under 1 minute.</span>
-        </h1>
-        
-        <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
-            Avoid all technical complexity. One-click deploy your own 24/7 active AI agent on Telegram or WhatsApp.
-        </p>
-
-        <div class="glass-panel p-2 rounded-2xl max-w-md mx-auto mb-12 text-left">
-            <div class="bg-black/50 rounded-xl p-6 space-y-6">
-                
-                <div>
-                    <label class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3 block">1. Select AI Model</label>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button class="flex items-center gap-2 px-4 py-3 bg-white/10 border border-orange-500 text-white rounded-lg text-sm font-medium transition-all">
-                            <i data-lucide="sparkles" class="w-4 h-4 text-orange-500"></i>
-                            GPT-4o
-                        </button>
-                        <button class="flex items-center gap-2 px-4 py-3 bg-transparent border border-white/10 text-gray-400 hover:bg-white/5 rounded-lg text-sm font-medium transition-all">
-                            <i data-lucide="brain-circuit" class="w-4 h-4"></i>
-                            Claude 3.5
-                        </button>
-                    </div>
-                </div>
-
-                <div>
-                    <label class="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3 block">2. Select Channel</label>
-                    <div class="grid grid-cols-2 gap-2">
-                        <button class="flex items-center gap-2 px-4 py-3 bg-white/10 border border-orange-500 text-white rounded-lg text-sm font-medium transition-all">
-                            <i data-lucide="send" class="w-4 h-4 text-blue-400"></i>
-                            Telegram
-                        </button>
-                        <button class="flex items-center gap-2 px-4 py-3 bg-transparent border border-white/10 text-gray-400 hover:bg-white/5 rounded-lg text-sm font-medium transition-all opacity-50 cursor-not-allowed">
-                            <i data-lucide="message-circle" class="w-4 h-4"></i>
-                            WhatsApp (Soon)
-                        </button>
-                    </div>
-                </div>
-
-                <button class="w-full bg-orange-500 hover:bg-orange-400 text-black font-bold py-4 rounded-lg flex items-center justify-center gap-2 transition-transform hover:scale-[1.02]">
-                    <img src="https://www.google.com/favicon.ico" class="w-4 h-4" alt="G">
-                    Sign in with Google to Deploy
-                </button>
-                <p class="text-center text-xs text-gray-500">No credit card required for trial.</p>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+                <a href="#features" class="hover:text-white transition-colors">Services</a>
+                <a href="#pricing" class="hover:text-white transition-colors">Pricing</a>
             </div>
-        </div>
-    </main>
-
-    <section class="py-24 px-6 border-t border-white/10 bg-white/[0.02]">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-16">Why use Claw Cloud?</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="p-8 rounded-2xl border border-red-500/20 bg-red-900/5">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center text-red-500">
-                            <i data-lucide="x" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="font-bold text-xl text-red-400">The Hard Way</h3>
-                    </div>
-                    <ul class="space-y-4 text-sm text-gray-400">
-                        <li class="flex justify-between border-b border-red-500/10 pb-2">
-                            <span>Rent a VPS Server</span>
-                            <span class="text-red-300">15 min</span>
-                        </li>
-                        <li
+            <a href="https://wa.me/971585598906" target="_blank" class="flex items-center gap-2 px-5 py-2 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/50
