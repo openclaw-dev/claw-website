@@ -3,26 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Claw.ae | Private AI Infrastructure & Strategic Advisory</title>
-    <meta name="description" content="Secure, hardware-locked AI implementation and strategic advisory for founders. Claw.ae transforms AI noise into executive clarity.">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    
     <style>
         body { font-family: 'Roboto', sans-serif; background-color: #ffffff; color: #3c4043; scroll-behavior: smooth; }
         h1, h2, h3, nav { font-family: 'Google Sans', sans-serif; color: #202124; }
         .google-blue { background-color: #1a73e8; }
         .google-blue-text { color: #1a73e8; }
-        .card { border: 1px solid #dadce0; transition: all 0.2s; }
-        .card:hover { box-shadow: 0 4px 12px 0 rgba(60,64,67,0.15); }
-        .btn-primary { background-color: #1a73e8; border-radius: 4px; color: white; font-weight: 500; transition: background 0.2s; }
+        .card { border: 1px solid #dadce0; transition: all 0.2s; border-radius: 8px; }
+        .card:hover { box-shadow: 0 4px 12px 0 rgba(60,64,67,0.15); border-color: transparent; }
+        .btn-primary { background-color: #1a73e8; border-radius: 4px; color: white; font-weight: 500; }
         .btn-outline { border: 1px solid #dadce0; color: #1a73e8; border-radius: 4px; font-weight: 500; }
         .wa-float {
             position: fixed; bottom: 30px; right: 30px; background-color: #1a73e8; color: white;
             padding: 12px 24px; border-radius: 50px; font-weight: 500; z-index: 1000;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; font-size: 13px;
         }
     </style>
 </head>
@@ -38,10 +34,10 @@
                 <div class="w-8 h-8 google-blue rounded flex items-center justify-center text-white font-bold">C</div>
                 <span class="text-xl font-medium tracking-tight italic">Claw.ae</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#how" class="hover:text-blue-600 transition">Philosophy</a>
-                <a href="#pricing" class="hover:text-blue-600 transition">Engagement</a>
-                <a href="mailto:saulet@bu.edu" class="google-blue-text">saulet@bu.edu</a>
+            <div class="hidden md:flex space-x-8 text-[11px] uppercase tracking-[0.2em] font-bold">
+                <a href="#philosophy" class="hover:text-blue-600 transition">Philosophy</a>
+                <a href="#pricing" class="hover:text-blue-600 transition text-gray-400">Engagement</a>
+                <a href="#intake" class="google-blue-text border-b-2 border-blue-600 pb-1">Partner Access</a>
             </div>
         </div>
     </nav>
@@ -49,82 +45,93 @@
     <section class="py-24 px-6 text-center max-w-5xl mx-auto">
         <h1 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight">AI Noise <span class="google-blue-text">→</span> Clarity.</h1>
         <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-            Claw.ae builds private, hardware-locked AI infrastructure and provides elite strategic advisory for founders who don't have time for the "hype."
+            Private, hardware-locked AI infrastructure and strategic advisory for founders who don't have time for the noise. 
         </p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="#pricing" class="btn-primary px-10 py-4 text-sm">View Implementation Tiers</a>
+            <a href="#pricing" class="btn-primary px-10 py-4 text-sm">View Implementation</a>
             <a href="https://wa.me/971585598906" class="btn-outline px-10 py-4 text-sm">WhatsApp the Principal</a>
         </div>
     </section>
 
-    <section id="how" class="py-20 bg-gray-50 px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-xs uppercase tracking-[0.3em] google-blue-text font-bold mb-4">The Claw Methodology</h2>
-            <h3 class="text-3xl font-bold mb-8">"I am the Plumber."</h3>
-            <p class="text-gray-600 leading-relaxed font-light italic text-lg">
-                "Open-source AI is the water—abundant but chaotic. I build the pipes that ensure it flows directly into your business, 24/7, without you ever touching a terminal. I filter the noise so you can focus on the signal."
-            </p>
+    <section id="philosophy" class="py-20 bg-gray-50 px-6 border-y border-gray-100">
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-white p-8 card">
+                <h4 class="text-red-500 text-xs font-bold uppercase tracking-widest mb-4 italic">The Noise (99%)</h4>
+                <ul class="space-y-3 text-sm text-gray-500">
+                    <li>✕ Paying $5k/mo for manual PDF reports</li>
+                    <li>✕ Data leaked to public AI training models</li>
+                    <li>✕ Wasting 40+ hours/mo on "AI Research"</li>
+                    <li>✕ Buying tool-stacks you don't actually need</li>
+                </ul>
+            </div>
+            <div class="p-8 bg-blue-50 border border-blue-100 rounded-lg shadow-sm">
+                <h4 class="google-blue-text text-xs font-bold uppercase tracking-widest mb-4 italic">The Signal (Claw.ae)</h4>
+                <ul class="space-y-3 text-sm text-gray-700 font-medium">
+                    <li>✓ 24/7 Ops intelligence via Secure WhatsApp</li>
+                    <li>✓ Hardware-locked data (Mac Mini Nodes)</li>
+                    <li>✓ Zero Technical Friction (I am the plumber)</li>
+                    <li>✓ Translating hype into bottom-line ROAS</li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <section id="pricing" class="py-24 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="text-center text-4xl font-bold mb-16 italic">Choose your level of Sovereignty</h2>
-            
+            <h2 class="text-center text-4xl font-bold mb-16">Engagement Tiers</h2>
             <div class="grid md:grid-cols-3 gap-0 border border-gray-200 rounded-xl overflow-hidden shadow-2xl">
                 
-                <div class="p-10 border-b md:border-b-0 md:border-r border-gray-100 bg-white">
+                <div class="p-10 border-b md:border-b-0 md:border-r border-gray-100">
                     <h3 class="text-xl font-bold mb-2">The Infrastructure</h3>
-                    <p class="text-gray-500 mb-8 text-xs uppercase tracking-widest">One-time Implementation</p>
-                    <div class="text-4xl font-bold mb-8 text-gray-900">$3,500 <span class="text-xs font-normal text-gray-400 font-sans tracking-tight">+ Hardware</span></div>
-                    <ul class="space-y-4 mb-12 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> Local Mac Mini Deployment</li>
-                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> Private Webhook Architecture</li>
-                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> 24h Setup from Start to Finish</li>
+                    <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest">One-time Build</p>
+                    <div class="text-4xl font-bold mb-8">$3,500 <span class="text-xs font-normal text-gray-400">+ Node</span></div>
+                    <ul class="space-y-4 mb-10 text-xs text-gray-500">
+                        <li>● Local Hardware Deployment</li>
+                        <li>● Secure Shopify/Meta Tunneling</li>
+                        <li>● Custom AI "Skill" Library</li>
                     </ul>
-                    <a href="https://wa.me/971585598906?text=Claw.ae%20Infrastructure%20Inquiry" class="btn-outline px-6 py-4 block text-center uppercase text-[10px] tracking-widest font-bold">Deploy Now</a>
+                    <a href="https://wa.me/971585598906" class="btn-outline px-6 py-4 block text-center uppercase text-[10px] font-bold">Deploy Node</a>
                 </div>
 
                 <div class="p-10 border-b md:border-b-0 md:border-r border-gray-100 bg-blue-50 relative">
-                    <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-[9px] uppercase tracking-widest font-bold">The Filter</div>
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-[9px] font-bold uppercase">Clarity</div>
                     <h3 class="text-xl font-bold mb-2">The Strategic Partner</h3>
-                    <p class="text-gray-500 mb-8 text-xs uppercase tracking-widest">Advisory Retainer</p>
-                    <div class="text-4xl font-bold mb-8 text-gray-900">$2,500 <span class="text-xs font-normal text-gray-400 font-sans tracking-tight">/ month</span></div>
-                    <ul class="space-y-4 mb-12 text-sm text-gray-700">
-                        <li class="flex items-center font-bold"><span class="mr-2 text-blue-600">●</span> Monthly "Signal" Briefing</li>
-                        <li class="flex items-center font-bold"><span class="mr-2 text-blue-600">●</span> Bi-Weekly Advisory Calls</li>
-                        <li class="flex items-center font-bold"><span class="mr-2 text-blue-600">●</span> AI Tool-Stack Cost Audits</li>
+                    <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest">Advisory Retainer</p>
+                    <div class="text-4xl font-bold mb-8">$2,500 <span class="text-xs font-normal text-gray-400">/ mo</span></div>
+                    <ul class="space-y-4 mb-10 text-xs text-gray-700 font-medium">
+                        <li>● Monthly Executive Briefing (Signal)</li>
+                        <li>● Bi-Weekly Advisory Calls</li>
+                        <li>● Tool Stack & ROAS Audit</li>
                     </ul>
-                    <a href="https://wa.me/971585598906?text=Claw.ae%20Strategic%20Partner%20Inquiry" class="btn-primary px-6 py-4 block text-center uppercase text-[10px] tracking-widest font-bold">Get Clarity</a>
+                    <a href="https://wa.me/971585598906" class="btn-primary px-6 py-4 block text-center uppercase text-[10px] font-bold shadow-lg">Request Briefing</a>
                 </div>
 
-                <div class="p-10 bg-white">
+                <div class="p-10">
                     <h3 class="text-xl font-bold mb-2">The Sovereign</h3>
-                    <p class="text-gray-500 mb-8 text-xs uppercase tracking-widest">Full Ops Management</p>
-                    <div class="text-4xl font-bold mb-8 text-gray-900">$5,000 <span class="text-xs font-normal text-gray-400 font-sans tracking-tight">/ month</span></div>
-                    <ul class="space-y-4 mb-12 text-sm text-gray-600">
-                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> Infrastructure + Advisory</li>
-                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> Custom Skill Dev (Monthly)</li>
-                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> 24/7 Priority Support Line</li>
+                    <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest">Managed AI Ops</p>
+                    <div class="text-4xl font-bold mb-8">$5,000 <span class="text-xs font-normal text-gray-400">/ mo</span></div>
+                    <ul class="space-y-4 mb-10 text-xs text-gray-500">
+                        <li>● Infrastructure + Advisory</li>
+                        <li>● Monthly System Updates</li>
+                        <li>● 24/7 Priority Support</li>
                     </ul>
-                    <a href="https://wa.me/971585598906?text=Claw.ae%20Sovereign%20Inquiry" class="btn-outline px-6 py-4 block text-center uppercase text-[10px] tracking-widest font-bold">The Full Package</a>
+                    <a href="https://wa.me/971585598906" class="btn-outline px-6 py-4 block text-center uppercase text-[10px] font-bold">Scale Everything</a>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-24 px-6 border-t border-gray-100">
+    <footer id="intake" class="bg-white py-24 px-6 border-t border-gray-100">
         <div class="max-w-xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4 italic">Ready to cut the noise?</h2>
-            <p class="text-gray-500 mb-12 text-sm">Applying for intake ensures we prioritize founders who are ready for immediate implementation.</p>
+            <h2 class="text-3xl font-bold mb-4">Partner Intake</h2>
+            <p class="text-gray-500 mb-12 text-sm leading-relaxed">I only partner with two new founders per month to maintain white-glove deployment and advisory quality.</p>
             <form action="https://formspree.io/f/saulet@bu.edu" method="POST" class="space-y-4">
-                <input type="text" name="name" placeholder="Name" required class="w-full p-4 border border-gray-200 rounded-lg focus:border-blue-500 outline-none text-sm transition">
-                <input type="email" name="email" placeholder="Professional Email" required class="w-full p-4 border border-gray-200 rounded-lg focus:border-blue-500 outline-none text-sm transition">
+                <input type="text" name="name" placeholder="Name" required class="w-full p-4 border border-gray-200 rounded-lg outline-none focus:border-blue-500 text-sm">
+                <input type="email" name="email" placeholder="Professional Email" required class="w-full p-4 border border-gray-200 rounded-lg outline-none focus:border-blue-500 text-sm">
                 <button type="submit" class="w-full btn-primary py-4 font-bold uppercase tracking-widest text-[10px]">Submit Intake Application</button>
             </form>
-            <div class="mt-16 text-[10px] text-gray-400 uppercase tracking-[0.4em]">
-                Claw.ae | Digital Sovereignty | +971 58 559 8906
+            <div class="mt-20 text-[10px] text-gray-300 uppercase tracking-[0.5em] font-bold">
+                Claw.ae | Digital Sovereignty | Dubai & Global
             </div>
         </div>
     </footer>
