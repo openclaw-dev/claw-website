@@ -3,169 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sovereign AI | The Private AI Operating System</title>
-    <meta name="description" content="A Google-standard implementation of private, hardware-locked AI for high-impact individuals.">
+    
+    <title>Sovereign AI | The Private AI Operating System for Founders</title>
+    <meta name="description" content="Secure, hardware-locked AI implementation for E-com founders and executives. Connect Shopify, Meta Ads, and Slack to a private AI brain.">
+    <meta name="keywords" content="AI Concierge, Shopify AI Automation, Private AI for Founders, Meta Ads AI, OpenClaw Implementation">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Roboto', sans-serif; background-color: #ffffff; color: #3c4043; }
+        body { font-family: 'Roboto', sans-serif; background-color: #ffffff; color: #3c4043; scroll-behavior: smooth; }
         h1, h2, h3, nav { font-family: 'Google Sans', sans-serif; color: #202124; }
         .google-blue { background-color: #1a73e8; }
         .google-blue-text { color: #1a73e8; }
-        .google-shadow { box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15); }
         .card { border: 1px solid #dadce0; border-radius: 8px; transition: all 0.2s; }
-        .card:hover { box-shadow: 0 4px 6px 0 rgba(60,64,67,0.3); }
-        .btn-primary { background-color: #1a73e8; border-radius: 4px; color: white; font-weight: 500; }
+        .card:hover { box-shadow: 0 4px 12px 0 rgba(60,64,67,0.15); border-color: transparent; }
+        .btn-primary { background-color: #1a73e8; border-radius: 4px; color: white; font-weight: 500; transition: background 0.2s; }
+        .btn-primary:hover { background-color: #1765cc; }
         .btn-outline { border: 1px solid #dadce0; color: #1a73e8; border-radius: 4px; font-weight: 500; }
+        .wa-float {
+            position: fixed; bottom: 30px; right: 30px; background-color: #1a73e8; color: white;
+            padding: 12px 24px; border-radius: 50px; font-weight: 500; z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; display: flex; align-items: center;
+        }
     </style>
 </head>
 <body>
 
+    <a href="https://wa.me/971585598906?text=I'm%20interested%20in%20deploying%20Sovereign%20AI%20for%20my%20business." class="wa-float">
+        <span class="mr-2">Direct Line:</span> +971 58 559 8906
+    </a>
+
     <nav class="sticky top-0 bg-white border-b border-gray-200 z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
             <div class="flex items-center space-x-2">
-                <div class="w-8 h-8 google-blue rounded-full flex items-center justify-center text-white font-bold">S</div>
+                <div class="w-8 h-8 google-blue rounded-lg flex items-center justify-center text-white font-bold">S</div>
                 <span class="text-xl font-medium tracking-tight">Sovereign AI</span>
             </div>
             <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#how" class="hover:text-blue-600">How it works</a>
-                <section class="py-20 bg-white px-6 border-b border-gray-100">
-                    <div class="max-w-7xl mx-auto">
-                        <div class="flex flex-col md:flex-row items-center gap-16">
-                            <div class="md:w-1/2">
-                                <h2 class="text-3xl font-bold mb-6">Built for the modern stack.</h2>
-                                <p class="text-gray-600 mb-8 leading-relaxed">
-                                    We don't just "install AI." We build the connective tissue between your existing tools. Your AI Concierge lives where you work, pulling real-time data to give you executive-level insights.
-                                </p>
-                                <ul class="space-y-4">
-                                    <li class="flex items-center text-sm font-medium text-gray-700">
-                                        <span class="w-2 h-2 google-blue rounded-full mr-3"></span>
-                                        Shopify: Live inventory & sales velocity alerts
-                                    </li>
-                                    <li class="flex items-center text-sm font-medium text-gray-700">
-                                        <span class="w-2 h-2 google-blue rounded-full mr-3"></span>
-                                        Meta Ads: Real-time ROAS monitoring via WhatsApp
-                                    </li>
-                                    <li class="flex items-center text-sm font-medium text-gray-700">
-                                        <span class="w-2 h-2 google-blue rounded-full mr-3"></span>
-                                        Slack/WhatsApp: 24/7 "Ask me anything" about your business
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="md:w-1/2 grid grid-cols-2 gap-4">
-                                <div class="p-6 bg-gray-50 rounded-lg text-center">
-                                    <p class="text-[10px] uppercase tracking-widest text-gray-400 mb-2">Agency Cost</p>
-                                    <p class="text-xl font-bold text-red-400">$5,000/mo</p>
-                                    <p class="text-[9px] text-gray-400">PDF Reports & Meetings</p>
-                                </div>
-                                <div class="p-6 bg-blue-50 rounded-lg text-center border border-blue-200">
-                                    <p class="text-[10px] uppercase tracking-widest google-blue-text mb-2">Sovereign AI</p>
-                                    <p class="text-xl font-bold google-blue-text">$500/mo</p>
-                                    <p class="text-[9px] text-blue-400">24/7 Real-Time Intel</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            
-                <section class="py-20 bg-gray-50 px-6">
-                    <div class="max-w-3xl mx-auto text-center">
-                        <h2 class="text-2xl font-bold mb-6">The "Plumbing" Philosophy</h2>
-                        <p class="text-sm text-gray-600 leading-relaxed italic">
-                            "Open-source AI tools are like water—free and abundant. But you don't want a lake; you want a faucet. We provide the plumbing, the filters, and the maintenance to ensure that intelligence flows directly into your decision-making, without you ever touching a line of code."
-                        </p>
-                    </div>
-                </section>
-                <a href="#security" class="hover:text-blue-600">Security</a>
-                <a href="#pricing" class="hover:text-blue-600">Pricing</a>
-                <a href="https://wa.me/971585598906" class="google-blue-text">Contact Sales</a>
+                <a href="#how" class="hover:text-blue-600 transition">How it works</a>
+                <a href="#integrations" class="hover:text-blue-600 transition">Integrations</a>
+                <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
+                <a href="mailto:saulet@bu.edu" class="google-blue-text font-bold">saulet@bu.edu</a>
             </div>
         </div>
     </nav>
 
-    <section class="py-20 px-6 text-center max-w-4xl mx-auto">
-        <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">AI intelligence. <br><span class="google-blue-text">Personal hardware.</span></h1>
-        <p class="text-xl text-gray-600 mb-10 leading-relaxed font-light">
-            We deploy private AI ecosystems onto your own hardware. Zero cloud training. Zero data mining. A "Jarvis" that lives in your home, not in the cloud.
+    <section class="py-24 px-6 text-center max-w-5xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-bold mb-8 tracking-tight">AI intelligence. <br><span class="google-blue-text">Private Infrastructure.</span></h1>
+        <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
+            We deploy private, hardware-locked AI ecosystems for founders who are done with overpriced agencies and "PDF reports." Get a 24/7 AI employee that lives on your hardware and talks to your tools.
         </p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
-            <a href="#pricing" class="btn-primary px-8 py-3 text-sm">Get started</a>
-            <a href="https://wa.me/971585598906" class="btn-outline px-8 py-3 text-sm">Message the Principal</a>
-        </div>
-        <div class="mt-16 flex justify-center">
-            <img src="https://www.apple.com/v/mac-mini/u/images/overview/hero/hero_mac_mini__f6u56u0f2m6u_large.jpg" alt="Mac Mini" class="w-64 opacity-80">
+            <a href="#pricing" class="btn-primary px-10 py-4 text-sm">View Implementation Tiers</a>
+            <a href="https://wa.me/971585598906" class="btn-outline px-10 py-4 text-sm">WhatsApp the Principal</a>
         </div>
     </section>
 
     <section id="how" class="py-20 bg-gray-50 px-6">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-16">Intelligence designed for privacy</h2>
+            <h2 class="text-3xl font-bold mb-4">The Technical Friction Tax</h2>
+            <p class="text-gray-500 mb-16 max-w-2xl mx-auto">Open-source tools are free. Professional implementation isn't. We handle the nightmare so you get the edge.</p>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="card bg-white p-8 text-left">
                     <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Hardware Isolation</h3>
-                    <p class="text-gray-600 text-sm">Your AI runs on a dedicated Mac Mini. Your private messages and data never leave your local network.</p>
+                    <h3 class="text-lg font-bold mb-3 text-gray-900">Zero Terminal Usage</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Don't spend 6 hours wrestling with GitHub and SSH keys. We deploy the "Walled Garden" on your hardware (Mac Mini) remotely or on-site.</p>
                 </div>
                 <div class="card bg-white p-8 text-left">
                     <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">High Agency Onboarding</h3>
-                    <p class="text-gray-600 text-sm">We handle the "Terminal" commands, iCloud separation, and API tunnels. You get the results without the technical pain.</p>
+                    <h3 class="text-lg font-bold mb-3 text-gray-900">Privacy Sovereignty</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Most AI tools train on your data. Our implementation is hardware-locked. Your Shopify data and Meta Ads strategy stay in your building.</p>
                 </div>
                 <div class="card bg-white p-8 text-left">
                     <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
-                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Seamless Control</h3>
-                    <p class="text-gray-600 text-sm">Communicate with your AI via WhatsApp, iMessage, or Voice. It manages your life while you live it.</p>
+                    <h3 class="text-lg font-bold mb-3 text-gray-900">24/7 Slack/WhatsApp</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Stop checking dashboards. Ask your AI via WhatsApp: "What was our ROAS today?" or "Summarize my customer tickets." Get instant answers.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="py-24 px-6 max-w-5xl mx-auto">
-        <h2 class="text-center text-3xl font-bold mb-16">Simple, transparent pricing</h2>
-        <div class="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-lg overflow-hidden">
-            <div class="p-12 border-b md:border-b-0 md:border-r border-gray-200">
-                <h3 class="text-xl font-bold mb-2">The Deployment</h3>
-                <p class="text-gray-500 mb-6 text-sm">One-time hardware setup & training</p>
-                <div class="text-4xl font-bold mb-6">$7,500 <span class="text-sm font-normal text-gray-400">+ hardware</span></div>
-                <ul class="space-y-3 mb-10 text-sm">
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Physical Hardware Audit</li>
-                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Private iCloud Ecosystem</li>
-                </ul>
-                <a href="https://wa.me/971585598906" class="btn-outline px-6 py-2 block text-center">Start Onboarding</a>
+    <section id="integrations" class="py-24 px-6 bg-white max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center gap-16">
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold mb-8 tracking-tight">Built for the <br><span class="google-blue-text">Modern Founder.</span></h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    PDF reports are dead. Real-time operational intelligence is the new standard. We connect OpenClaw/EasyClaw infrastructure to your vital organs.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="mt-1 mr-4 text-blue-600">✓</div>
+                        <div><strong class="text-gray-900">Shopify:</strong> Automated inventory velocity & sales alerts.</div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1 mr-4 text-blue-600">✓</div>
+                        <div><strong class="text-gray-900">Meta Ads:</strong> Real-time ROAS monitoring and campaign pausing.</div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="mt-1 mr-4 text-blue-600">✓</div>
+                        <div><strong class="text-gray-900">Klaviyo:</strong> Sentiment analysis on email campaign responses.</div>
+                    </div>
+                </div>
             </div>
-            <div class="p-12 bg-blue-50">
-                <h3 class="text-xl font-bold mb-2">The Concierge</h3>
-                <p class="text-gray-500 mb-6 text-sm">Ongoing optimization & maintenance</p>
-                <div class="text-4xl font-bold mb-6">$2,500 <span class="text-sm font-normal text-gray-400">/ month</span></div>
-                <ul class="space-y-3 mb-10 text-sm">
-                    <li class="flex items-center font-bold"><svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Priority WhatsApp Support</li>
-                    <li class="flex items-center font-bold"><svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> API & Token Management</li>
-                </ul>
-                <a href="https://wa.me/971585598906" class="btn-primary px-6 py-2 block text-center">Join the Beta</a>
+            <div class="md:w-1/2 grid grid-cols-1 gap-4">
+                <div class="p-8 bg-gray-50 rounded-xl border border-gray-100 shadow-sm">
+                    <h4 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-4">The Founder Arbitrage</h4>
+                    <div class="flex justify-between items-end mb-4">
+                        <span class="text-sm text-gray-600 font-medium">Standard Agency</span>
+                        <span class="text-red-500 font-bold">$5,000+/mo</span>
+                    </div>
+                    <div class="w-full bg-gray-200 h-2 rounded-full mb-6">
+                        <div class="bg-red-400 h-2 rounded-full w-full"></div>
+                    </div>
+                    <div class="flex justify-between items-end mb-4">
+                        <span class="text-sm text-gray-600 font-medium">Sovereign AI Concierge</span>
+                        <span class="google-blue-text font-bold">$500/mo</span>
+                    </div>
+                    <div class="w-full bg-gray-200 h-2 rounded-full">
+                        <div class="bg-blue-500 h-2 rounded-full w-1/10" style="width: 10%;"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 px-6 max-w-xl mx-auto border-t border-gray-100">
-        <h2 class="text-2xl font-bold mb-4 text-center">Contact our team</h2>
-        <p class="text-center text-gray-500 mb-8 text-sm">Submit your inquiry and we'll respond within 24 hours.</p>
-        <form action="https://formspree.io/f/saulet@bu.edu" method="POST" class="space-y-4">
-            <input type="text" name="name" placeholder="Name" class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-sm">
-            <input type="email" name="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-sm">
-            <textarea name="message" placeholder="Requirements" rows="3" class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-sm"></textarea>
-            <button type="submit" class="w-full btn-primary py-3">Send inquiry</button>
-        </form>
+    <section id="pricing" class="py-24 px-6 bg-gray-50">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-center text-4xl font-bold mb-16">Engagement Tiers</h2>
+            <div class="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-xl overflow-hidden shadow-lg bg-white">
+                <div class="p-12 border-b md:border-b-0 md:border-r border-gray-200">
+                    <h3 class="text-2xl font-bold mb-2">The Setup</h3>
+                    <p class="text-gray-500 mb-8 text-sm italic font-light">The plumbing and hardware deployment.</p>
+                    <div class="text-5xl font-bold mb-8 text-gray-900">$5,000 <span class="text-sm font-normal text-gray-400 font-sans tracking-tight">+ hardware</span></div>
+                    <ul class="space-y-4 mb-12 text-sm text-gray-600">
+                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> Dedicated Mac Mini Configuration</li>
+                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> Private API & Webhook Tunneling</li>
+                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> Walled Garden iCloud Security</li>
+                        <li class="flex items-center"><span class="mr-2 text-blue-600">●</span> One-Time Training Workshop</li>
+                    </ul>
+                    <a href="https://wa.me/971585598906?text=Interested%20in%20The%20Setup" class="btn-outline px-6 py-4 block text-center uppercase text-[11px] tracking-[0.2em]">Inquire for Availability</a>
+                </div>
+                <div class="p-12 bg-blue-50">
+                    <h3 class="text-2xl font-bold mb-2">The Concierge</h3>
+                    <p class="text-gray-500 mb-8 text-sm italic font-light">The "Jarvis" maintenance & updates.</p>
+                    <div class="text-5xl font-bold mb-8 text-gray-900">$500 <span class="text-sm font-normal text-gray-400 font-sans tracking-tight">/ month</span></div>
+                    <ul class="space-y-4 mb-12 text-sm text-gray-700">
+                        <li class="flex items-center font-medium"><span class="mr-2 text-blue-600">●</span> Priority WhatsApp Bridge Support</li>
+                        <li class="flex items-center font-medium"><span class="mr-2 text-blue-600">●</span> Custom Skill Development (Monthly)</li>
+                        <li class="flex items-center font-medium"><span class="mr-2 text-blue-600">●</span> API & Token Management</li>
+                        <li class="flex items-center font-medium"><span class="mr-2 text-blue-600">●</span> Quarterly Security Data Audits</li>
+                    </ul>
+                    <a href="https://wa.me/971585598906?text=Interested%20in%20The%20Concierge" class="btn-primary px-6 py-4 block text-center uppercase text-[11px] tracking-[0.2em]">Scale your Operations</a>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer class="py-12 text-center text-[11px] text-gray-400 uppercase tracking-widest border-t border-gray-100">
-        © 2026 Sovereign AI Office | Discreet Deployment | +971 58 559 8906 | saulet@bu.edu
+    <section class="py-24 px-6 bg-white border-t border-gray-100">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-xl font-bold mb-6 italic text-gray-400">"I am the Plumber."</h2>
+            <p class="text-gray-600 leading-relaxed font-light">
+                Water is free. You pay for the pipes that bring it to your sink. Open-source AI is the water. I build the pipes that ensure it flows into your business, 24/7, without you ever touching a line of code.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-white py-24 px-6 border-t border-gray-100">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-8">Ready to exit the agency loop?</h2>
+            <form action="https://formspree.io/f/saulet@bu.edu" method="POST" class="space-y-4">
+                <input type="text" name="name" placeholder="Name" required class="w-full p-4 border border-gray-200 rounded-lg focus:border-blue-500 outline-none text-sm transition">
+                <input type="email" name="email" placeholder="Professional Email" required class="w-full p-4 border border-gray-200 rounded-lg focus:border-blue-500 outline-none text-sm transition">
+                <textarea name="message" placeholder="Which tools do you need to connect? (Shopify, Meta, etc.)" rows="4" class="w-full p-4 border border-gray-200 rounded-lg focus:border-blue-500 outline-none text-sm transition"></textarea>
+                <button type="submit" class="w-full btn-primary py-4 font-bold uppercase tracking-widest text-[10px]">Submit Intake Application</button>
+            </form>
+            <div class="mt-16 text-[10px] text-gray-400 uppercase tracking-[0.3em]">
+                Sovereign AI Office | +971 58 559 8906 | saulet@bu.edu
+            </div>
+        </div>
     </footer>
 
 </body>
