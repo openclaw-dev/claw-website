@@ -7,21 +7,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
         .hero-gradient { background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); }
         .gold-accent { color: #c5a059; }
+        .bg-gold { background-color: #c5a059; }
         .border-gold { border-color: #c5a059; }
+        .wa-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #1a1a1a;
+            color: #c5a059;
+            border: 1px solid #c5a059;
+            padding: 12px 20px;
+            border-radius: 2px;
+            font-size: 10px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        .wa-float:hover { background-color: #c5a059; color: white; transform: translateY(-3px); }
     </style>
 </head>
 <body class="bg-[#fcfaf7] text-[#1a1a1a]">
 
+    <a href="https://wa.me/971585598906?text=I%20am%20interested%20in%20a%20private%20AI%20briefing." class="wa-float uppercase">
+        Secure Inquiry Line
+    </a>
+
     <nav class="p-8 flex justify-between items-center max-w-7xl mx-auto">
         <div class="text-xl font-bold tracking-widest uppercase">The Private AI Office</div>
         <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
-            <a href="#philosophy" class="hover:text-[#c5a059] transition">Philosophy</a>
-            <a href="#services" class="hover:text-[#c5a059] transition">The Garden</a>
-            <a href="#security" class="hover:text-[#c5a059] transition">Security</a>
+            <a href="#philosophy" class="hover:text-[#c5a059] transition text-[10px]">Philosophy</a>
+            <a href="#services" class="hover:text-[#c5a059] transition text-[10px]">The Garden</a>
+            <a href="#security" class="hover:text-[#c5a059] transition text-[10px]">Security</a>
+            <a href="https://wa.me/971585598906" class="gold-accent text-[10px]">Connect Directly</a>
         </div>
     </nav>
 
@@ -29,10 +53,10 @@
         <div class="max-w-4xl mx-auto text-center">
             <h1 class="text-5xl md:text-7xl mb-8 leading-tight">Your Digital Sovereignty, <br><span class="italic gold-accent text-4xl md:text-6xl text-white opacity-90 font-light text-serif">Restored.</span></h1>
             <p class="text-xl text-gray-400 mb-12 font-light leading-relaxed max-w-2xl mx-auto">
-                We bridge the gap between "The Future" and your privacy. Custom, hardware-locked AI ecosystems for high-impact leaders who value time over technicality.
+                Custom, hardware-locked AI ecosystems for leaders who value time over technicality. Secure, private, and personally architected.
             </p>
             <div class="flex flex-col md:flex-row justify-center gap-6">
-                <a href="#contact" class="bg-[#c5a059] hover:bg-[#b38f4d] text-white px-10 py-4 font-bold tracking-widest uppercase text-xs transition">Request a Private Briefing</a>
+                <a href="#contact" class="bg-[#c5a059] hover:bg-[#b38f4d] text-white px-10 py-4 font-bold tracking-widest uppercase text-[10px] transition">Request a Private Briefing</a>
             </div>
         </div>
     </section>
@@ -40,28 +64,17 @@
     <section id="philosophy" class="py-24 max-w-5xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl mb-6">The "Technical Gap" is a Security Risk.</h2>
+                <h2 class="text-4xl mb-6 font-light italic">The technical gap is a liability.</h2>
                 <p class="text-gray-600 leading-relaxed mb-6">
-                    Most AI implementations are leaky. They rely on public cloud accounts, personal emails, and shared data streams. If you are using AI on your primary device, you aren't just using a tool—you are opening a door to your private world.
-                </p>
-                <p class="text-gray-600 leading-relaxed">
-                    We believe the most powerful technology should be <strong>air-gapped, hardware-contained, and invisible.</strong>
+                    If you are using AI on your primary device without a walled garden, you are opening a door to your private world. We believe powerful technology should be <strong>air-gapped and hardware-contained.</strong>
                 </p>
             </div>
             <div class="bg-white p-10 border border-gray-100 shadow-xl">
-                <ul class="space-y-6">
-                    <li class="flex items-start">
-                        <span class="gold-accent mr-4">✕</span>
-                        <span class="text-sm">No "Terminal" commands or coding required.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="gold-accent mr-4">✕</span>
-                        <span class="text-sm">No sharing of private family data with public models.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="gold-accent mr-4">✕</span>
-                        <span class="text-sm">No subscription fatigue or token management.</span>
-                    </li>
+                <h3 class="text-xs uppercase tracking-widest font-bold mb-6 gold-accent">The Protocol</h3>
+                <ul class="space-y-4 text-sm text-gray-500">
+                    <li>✓ Localized hardware (No cloud leak)</li>
+                    <li>✓ Dedicated secure lines</li>
+                    <li>✓ Zero-knowledge architecture</li>
                 </ul>
             </div>
         </div>
@@ -70,53 +83,42 @@
     <section id="services" class="bg-[#1a1a1a] text-white py-24 px-6">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl mb-16 text-center italic font-light">The Walled Garden Implementation</h2>
-            <div class="grid md:grid-cols-3 gap-12">
-                <div class="border-t border-gray-700 pt-8">
-                    <span class="text-[#c5a059] text-xs font-bold tracking-tighter mb-4 block uppercase">Phase I</span>
-                    <h3 class="text-2xl mb-4">Hardware Isolation</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We deploy a dedicated, physical "AI Nerve Center" (Mac Mini) in your home or office. Your data never lives on your primary laptop.
-                    </p>
+            <div class="grid md:grid-cols-3 gap-12 text-center md:text-left">
+                <div class="border-t border-gray-800 pt-8">
+                    <h3 class="text-xl mb-4 gold-accent">I. Hardware Isolation</h3>
+                    <p class="text-gray-400 text-sm">Deployment of a dedicated "AI Nerve Center" on-premises.</p>
                 </div>
-                <div class="border-t border-gray-700 pt-8">
-                    <span class="text-[#c5a059] text-xs font-bold tracking-tighter mb-4 block uppercase">Phase II</span>
-                    <h3 class="text-2xl mb-4">Digital Containment</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        Setting up distinct identities—dedicated iMessage lines, burner iClouds, and private API tunnels to prevent cross-contamination of your digital life.
-                    </p>
+                <div class="border-t border-gray-800 pt-8">
+                    <h3 class="text-xl mb-4 gold-accent">II. Digital Containment</h3>
+                    <p class="text-gray-400 text-sm">Secure identity architecture and private API tunneling.</p>
                 </div>
-                <div class="border-t border-gray-700 pt-8">
-                    <span class="text-[#c5a059] text-xs font-bold tracking-tighter mb-4 block uppercase">Phase III</span>
-                    <h3 class="text-2xl mb-4">Custom Training</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        We train your personal "Concierge" on your specific communication style, schedule, and preferences. It doesn't just work; it sounds like you.
-                    </p>
+                <div class="border-t border-gray-800 pt-8">
+                    <h3 class="text-xl mb-4 gold-accent">III. Elite Training</h3>
+                    <p class="text-gray-400 text-sm">Fine-tuning the model to your unique communication DNA.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="security" class="py-24 bg-white px-6">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="text-4xl mb-8 font-light">Your Privacy is Non-Negotiable.</h2>
-            <div class="p-8 border-2 border-dashed border-gray-200 inline-block">
-                <p class="italic text-gray-500 max-w-xl">
-                    "We don't just 'install' software. We architect a digital fortress. Our methodology ensures that your private conversations stay between you and your machine."
-                </p>
             </div>
         </div>
     </section>
 
     <footer id="contact" class="bg-[#fcfaf7] py-24 border-t border-gray-100 px-6">
         <div class="max-w-xl mx-auto text-center">
-            <h2 class="text-3xl mb-4 italic">Ready to step into the future?</h2>
-            <p class="text-gray-600 mb-10">We currently accept two new clients per month to ensure white-glove deployment.</p>
-            <form class="space-y-4">
-                <input type="text" placeholder="Full Name" class="w-full p-4 border border-gray-200 focus:outline-none focus:border-[#c5a059] bg-white">
-                <input type="email" placeholder="Professional Email" class="w-full p-4 border border-gray-200 focus:outline-none focus:border-[#c5a059] bg-white">
-                <button class="w-full bg-[#1a1a1a] text-white p-4 font-bold tracking-widest uppercase text-xs hover:bg-[#333] transition">Apply for Intake</button>
-            </form>
-            <p class="mt-12 text-[10px] uppercase tracking-[0.2em] text-gray-400">© 2026 The Private AI Office. Discreet Implementation for High-Agency Individuals.</p>
+            <h2 class="text-3xl mb-4 italic">Begin the Onboarding</h2>
+            <p class="text-gray-600 mb-10 text-sm">We currently accept two new clients per month to ensure white-glove deployment.</p>
+            
+            <div class="space-y-6">
+                <a href="https://wa.me/971585598906" class="block w-full border border-gold p-4 text-[#c5a059] font-bold tracking-widest uppercase text-[10px] hover:bg-[#c5a059] hover:text-white transition">
+                    Message the Principal Directly (+971 58 559 8906)
+                </a>
+                
+                <div class="text-gray-300 text-[10px] uppercase tracking-widest">or</div>
+
+                <form class="space-y-4">
+                    <input type="text" placeholder="Full Name" class="w-full p-4 border border-gray-200 focus:outline-none focus:border-[#c5a059] bg-white text-sm">
+                    <button class="w-full bg-[#1a1a1a] text-white p-4 font-bold tracking-widest uppercase text-[10px] hover:bg-[#333] transition">Request Intake via Email</button>
+                </form>
+            </div>
+            
+            <p class="mt-20 text-[9px] uppercase tracking-[0.3em] text-gray-400">© 2026 The Private AI Office. Discreet Implementation for High-Agency Individuals.</p>
         </div>
     </footer>
 
