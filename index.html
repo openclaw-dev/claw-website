@@ -1,48 +1,125 @@
-<section id="use-cases" class="py-24 px-6 bg-white border-b border-gray-100">
-    <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl mb-16 text-center italic font-light">The Capability Gap</h2>
-        <div class="grid md:grid-cols-2 gap-12">
-            <div class="p-8 bg-[#fcfaf7] border border-gray-100">
-                <h4 class="gold-accent uppercase text-[10px] tracking-widest font-bold mb-4">Executive Presence</h4>
-                <p class="text-sm leading-relaxed text-gray-600">"Your AI drafts responses to complex business inquiries in your specific tone, accessible via a secure WhatsApp bridge, ensuring you are 'always on' without ever being distracted."</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovereign AI | The Private AI Operating System</title>
+    <meta name="description" content="A Google-standard implementation of private, hardware-locked AI for high-impact individuals.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Roboto', sans-serif; background-color: #ffffff; color: #3c4043; }
+        h1, h2, h3, nav { font-family: 'Google Sans', sans-serif; color: #202124; }
+        .google-blue { background-color: #1a73e8; }
+        .google-blue-text { color: #1a73e8; }
+        .google-shadow { box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15); }
+        .card { border: 1px solid #dadce0; border-radius: 8px; transition: all 0.2s; }
+        .card:hover { box-shadow: 0 4px 6px 0 rgba(60,64,67,0.3); }
+        .btn-primary { background-color: #1a73e8; border-radius: 4px; color: white; font-weight: 500; }
+        .btn-outline { border: 1px solid #dadce0; color: #1a73e8; border-radius: 4px; font-weight: 500; }
+    </style>
+</head>
+<body>
+
+    <nav class="sticky top-0 bg-white border-b border-gray-200 z-50">
+        <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 google-blue rounded-full flex items-center justify-center text-white font-bold">S</div>
+                <span class="text-xl font-medium tracking-tight">Sovereign AI</span>
             </div>
-            <div class="p-8 bg-[#fcfaf7] border border-gray-100">
-                <h4 class="gold-accent uppercase text-[10px] tracking-widest font-bold mb-4">The Family Office</h4>
-                <p class="text-sm leading-relaxed text-gray-600">"Imagine an assistant that knows your family’s dietary restrictions, travel preferences, and schedule—living entirely on a Mac Mini in your home, never touching a public server."</p>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#how" class="hover:text-blue-600">How it works</a>
+                <a href="#security" class="hover:text-blue-600">Security</a>
+                <a href="#pricing" class="hover:text-blue-600">Pricing</a>
+                <a href="https://wa.me/971585598906" class="google-blue-text">Contact Sales</a>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<section class="py-24 px-6 bg-[#1a1a1a] text-white">
-    <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-4xl mb-8 italic font-light">The Privacy Manifesto</h2>
-        <p class="text-gray-400 leading-relaxed mb-8 font-light">
-            If the service is free (or $20 a month), <strong>you are the product.</strong> Your data is being used to train the next generation of models. For the leader of a high-value organization or family, this is a catastrophic security leak.
+    <section class="py-20 px-6 text-center max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 tracking-tight">AI intelligence. <br><span class="google-blue-text">Personal hardware.</span></h1>
+        <p class="text-xl text-gray-600 mb-10 leading-relaxed font-light">
+            We deploy private AI ecosystems onto your own hardware. Zero cloud training. Zero data mining. A "Jarvis" that lives in your home, not in the cloud.
         </p>
-        <div class="inline-block border-t border-b border-gray-700 py-6 px-12 uppercase tracking-[0.4em] text-[10px] gold-accent">
-            Hardware Sovereignty is the only true Security.
+        <div class="flex flex-col md:flex-row justify-center gap-4">
+            <a href="#pricing" class="btn-primary px-8 py-3 text-sm">Get started</a>
+            <a href="https://wa.me/971585598906" class="btn-outline px-8 py-3 text-sm">Message the Principal</a>
         </div>
-    </div>
-</section>
+        <div class="mt-16 flex justify-center">
+            <img src="https://www.apple.com/v/mac-mini/u/images/overview/hero/hero_mac_mini__f6u56u0f2m6u_large.jpg" alt="Mac Mini" class="w-64 opacity-80">
+        </div>
+    </section>
 
-<section class="py-24 px-6 max-w-5xl mx-auto">
-    <div class="bg-white p-12 shadow-2xl border border-gray-50 flex flex-col md:flex-row gap-12 items-center">
-        <div class="md:w-1/3">
-            <div class="aspect-square bg-gray-200 grayscale rounded-sm mb-4">
-                <div class="flex items-center justify-center h-full text-gray-400 italic text-xs">Principal Portrait</div>
+    <section id="how" class="py-20 bg-gray-50 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-16">Intelligence designed for privacy</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card bg-white p-8 text-left">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hardware Isolation</h3>
+                    <p class="text-gray-600 text-sm">Your AI runs on a dedicated Mac Mini. Your private messages and data never leave your local network.</p>
+                </div>
+                <div class="card bg-white p-8 text-left">
+                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">High Agency Onboarding</h3>
+                    <p class="text-gray-600 text-sm">We handle the "Terminal" commands, iCloud separation, and API tunnels. You get the results without the technical pain.</p>
+                </div>
+                <div class="card bg-white p-8 text-left">
+                    <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Seamless Control</h3>
+                    <p class="text-gray-600 text-sm">Communicate with your AI via WhatsApp, iMessage, or Voice. It manages your life while you live it.</p>
+                </div>
             </div>
-            <h3 class="text-lg font-bold">Saulet</h3>
-            <p class="text-[10px] uppercase tracking-widest text-gray-400">Founder & Principal Architect</p>
         </div>
-        <div class="md:w-2/3">
-            <h3 class="text-2xl mb-6 italic">"I felt like an idiot so you don't have to."</h3>
-            <p class="text-sm text-gray-600 leading-relaxed mb-4">
-                I spent six hours in the technical trenches—wrestling with Terminal commands, iCloud walled gardens, and API token limits—to build my first functional, secure AI Assistant. 
-            </p>
-            <p class="text-sm text-gray-600 leading-relaxed">
-                I realized then that the "Future" is currently locked behind a wall of technical friction. My mission is to tear that wall down for you. You get the power of the "Future" without the six hours of pain.
-            </p>
+    </section>
+
+    <section id="pricing" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-center text-3xl font-bold mb-16">Simple, transparent pricing</h2>
+        <div class="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-lg overflow-hidden">
+            <div class="p-12 border-b md:border-b-0 md:border-r border-gray-200">
+                <h3 class="text-xl font-bold mb-2">The Deployment</h3>
+                <p class="text-gray-500 mb-6 text-sm">One-time hardware setup & training</p>
+                <div class="text-4xl font-bold mb-6">$7,500 <span class="text-sm font-normal text-gray-400">+ hardware</span></div>
+                <ul class="space-y-3 mb-10 text-sm">
+                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Physical Hardware Audit</li>
+                    <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Private iCloud Ecosystem</li>
+                </ul>
+                <a href="https://wa.me/971585598906" class="btn-outline px-6 py-2 block text-center">Start Onboarding</a>
+            </div>
+            <div class="p-12 bg-blue-50">
+                <h3 class="text-xl font-bold mb-2">The Concierge</h3>
+                <p class="text-gray-500 mb-6 text-sm">Ongoing optimization & maintenance</p>
+                <div class="text-4xl font-bold mb-6">$2,500 <span class="text-sm font-normal text-gray-400">/ month</span></div>
+                <ul class="space-y-3 mb-10 text-sm">
+                    <li class="flex items-center font-bold"><svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> Priority WhatsApp Support</li>
+                    <li class="flex items-center font-bold"><svg class="w-4 h-4 mr-2 text-blue-600" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg> API & Token Management</li>
+                </ul>
+                <a href="https://wa.me/971585598906" class="btn-primary px-6 py-2 block text-center">Join the Beta</a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    <section class="py-24 px-6 max-w-xl mx-auto border-t border-gray-100">
+        <h2 class="text-2xl font-bold mb-4 text-center">Contact our team</h2>
+        <p class="text-center text-gray-500 mb-8 text-sm">Submit your inquiry and we'll respond within 24 hours.</p>
+        <form action="https://formspree.io/f/saulet@bu.edu" method="POST" class="space-y-4">
+            <input type="text" name="name" placeholder="Name" class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-sm">
+            <input type="email" name="email" placeholder="Email" class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-sm">
+            <textarea name="message" placeholder="Requirements" rows="3" class="w-full p-3 border border-gray-300 rounded focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition text-sm"></textarea>
+            <button type="submit" class="w-full btn-primary py-3">Send inquiry</button>
+        </form>
+    </section>
+
+    <footer class="py-12 text-center text-[11px] text-gray-400 uppercase tracking-widest border-t border-gray-100">
+        © 2026 Sovereign AI Office | Discreet Deployment | +971 58 559 8906 | saulet@bu.edu
+    </footer>
+
+</body>
+</html>
