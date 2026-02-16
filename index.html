@@ -7,21 +7,21 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans+Arabic:wght@300;400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        :root { --google-blue: #1a73e8; }
-        body { font-family: 'Roboto', sans-serif; background-color: #ffffff; color: #3c4043; scroll-behavior: smooth; }
+        body { font-family: 'Roboto', sans-serif; background-color: #ffffff; color: #3c4043; scroll-behavior: smooth; transition: all 0.3s ease; }
         [lang="ar"] body { font-family: 'Noto Sans Arabic', sans-serif; }
         h1, h2, h3, nav { font-family: 'Google Sans', sans-serif; color: #202124; }
-        .google-blue-text { color: var(--google-blue); }
-        .btn-primary { background-color: var(--google-blue); border-radius: 4px; color: white; font-weight: 500; transition: background 0.2s; }
-        .btn-outline { border: 1px solid #dadce0; color: var(--google-blue); border-radius: 4px; font-weight: 500; }
+        .google-blue-text { color: #1a73e8; }
+        .btn-primary { background-color: #1a73e8; border-radius: 4px; color: white; font-weight: 500; transition: background 0.2s; }
+        .btn-outline { border: 1px solid #dadce0; color: #1a73e8; border-radius: 4px; font-weight: 500; }
         .logo-text { letter-spacing: -0.5px; font-weight: 700; font-size: 1.5rem; }
-        .cap-pill { background: #1a1a1a; border: 1px solid #333; color: #ccc; border-radius: 50px; padding: 8px 16px; font-size: 12px; display: inline-block; margin: 4px; }
-        .lang-switch { cursor: pointer; font-weight: bold; font-size: 14px; border: 1px solid #dadce0; padding: 4px 12px; border-radius: 20px; }
+        .cap-pill { background: #1a1a1a; border: 1px solid #333; color: #ccc; border-radius: 50px; padding: 8px 16px; font-size: 12px; display: inline-block; margin: 4px; transition: all 0.2s; }
+        .lang-switch { cursor: pointer; font-weight: bold; font-size: 11px; border: 1px solid #dadce0; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
         .wa-float {
-            position: fixed; bottom: 30px; right: 30px; background-color: var(--google-blue); color: white;
+            position: fixed; bottom: 30px; right: 30px; background-color: #1a73e8; color: white;
             padding: 12px 24px; border-radius: 50px; font-weight: 500; z-index: 1000;
-            box-shadow: 0 4px-10px rgba(0,0,0,0.3); text-decoration: none; font-size: 13px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; font-size: 13px;
         }
+        [dir="rtl"] .wa-float { right: auto; left: 30px; }
     </style>
 </head>
 <body>
@@ -35,9 +35,9 @@
                 <span class="logo-text text-[#202124]">claw<span class="google-blue-text">.ae</span></span>
             </div>
             <div class="hidden md:flex items-center space-x-8 text-[11px] uppercase tracking-[0.2em] font-bold">
-                <a href="#capabilities" data-en="Capabilities" data-ar="القدرات">Capabilities</a>
-                <a href="#network" data-en="Network" data-ar="الشبكة">Network</a>
-                <a href="#deployment" data-en="Deployment" data-ar="النشر">Deployment</a>
+                <a href="#capabilities" id="nav-cap">Capabilities</a>
+                <a href="#network" id="nav-net">Network</a>
+                <a href="#deployment" id="nav-dep">Deployment</a>
                 <div class="lang-switch google-blue-text" onclick="toggleLanguage()" id="langBtn">العربية</div>
             </div>
         </div>
@@ -54,11 +54,12 @@
             <a href="#deployment" class="btn-primary px-10 py-4 text-sm shadow-md" id="btn-deploy">Request Deployment</a>
             <a href="https://wa.me/971585598906" class="btn-outline px-10 py-4 text-sm" id="btn-wa">WhatsApp Principal</a>
         </div>
+        <p class="mt-8 text-xs text-gray-400 font-medium uppercase tracking-widest" id="hero-loc">Dubai in-person + Remote Worldwide</p>
     </section>
 
     <section id="protocol" class="py-20 bg-gray-50 px-6 border-y border-gray-100">
         <div class="max-w-4xl mx-auto text-center">
-            <h2 class="text-xs uppercase tracking-[0.4em] google-blue-text font-bold mb-4 italic" data-en="The Protocol" data-ar="البروتوكول">The Protocol</h2>
+            <h2 class="text-xs uppercase tracking-[0.4em] google-blue-text font-bold mb-4 italic" id="proto-head">The Protocol</h2>
             <p class="text-2xl md:text-3xl text-gray-800 font-light leading-snug" id="protocol-text">
                 AI is like water. The <span class="font-bold">claw team</span> builds the pipes that ensure it flows into the correct part of your business on time and nourishes it.
             </p>
@@ -67,48 +68,126 @@
 
     <section id="capabilities" class="py-24 bg-[#0a0a0a] text-white px-6 overflow-hidden">
         <div class="max-w-5xl mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-4" data-en="Autonomous Capabilities" data-ar="القدرات الذاتية">Autonomous Capabilities</h2>
-            <p class="text-xs text-blue-400 uppercase tracking-widest mb-10 font-bold" data-en="Add use cases via natural language" data-ar="أضف حالات الاستخدام عبر اللغة الطبيعية">Add use cases via natural language</p>
-            <div class="flex flex-wrap justify-center max-w-5xl mx-auto" id="caps-grid">
+            <h2 class="text-3xl font-bold mb-4" id="cap-title">Autonomous Capabilities</h2>
+            <p class="text-xs text-blue-400 uppercase tracking-widest mb-10 font-bold" id="cap-sub">ADD USE CASES VIA NATURAL LANGUAGE</p>
+            
+            <div class="relative flex flex-wrap justify-center max-w-5xl mx-auto" id="caps-grid">
                 </div>
+        </div>
+    </section>
+
+    <section id="network" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12" id="net-head">Potential Pilot Projects & Network</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70 grayscale hover:grayscale-0 transition duration-500 text-center font-bold text-gray-600">
+                <div>Digital Dubai</div>
+                <div>Property Finder</div>
+                <div>MDLBEAST</div>
+                <div class="italic">DBA Partners</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="deployment" class="py-24 px-6 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-center text-4xl font-bold mb-16 italic text-[#202124]" id="dep-title">Deployment Tiers</h2>
+            <div class="grid md:grid-cols-3 gap-0 border border-gray-200 rounded-xl overflow-hidden shadow-2xl bg-white">
+                
+                <div class="p-10 border-b md:border-b-0 md:border-r border-gray-100">
+                    <h3 class="text-xl font-bold mb-2" id="t1-name">Remote Setup</h3>
+                    <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest font-bold" id="t1-sub">First Agent Deployment</p>
+                    <div class="text-4xl font-bold mb-8">$1,200</div>
+                    <ul class="space-y-4 mb-10 text-xs text-gray-500 font-light" id="t1-list">
+                        <li>• Install + Hardening</li>
+                        <li>• Unified Workspace Orchestration</li>
+                        <li>• 14-day Hypercare Support</li>
+                    </ul>
+                    <a href="https://wa.me/971585598906" class="btn-outline px-6 py-4 block text-center uppercase text-[10px] font-bold" id="t1-btn">Initiate Setup</a>
+                </div>
+
+                <div class="p-10 border-b md:border-b-0 md:border-r border-gray-100 bg-blue-50 relative">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-[9px] font-bold uppercase tracking-widest" id="t2-tag">The Filter</div>
+                    <h3 class="text-xl font-bold mb-2" id="t2-name">The Strategic Partner</h3>
+                    <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest font-bold" id="t2-sub">Advisory Retainer</p>
+                    <div class="text-4xl font-bold mb-8">$2,500 <span class="text-xs font-normal text-gray-400">/ mo</span></div>
+                    <ul class="space-y-4 mb-10 text-xs text-gray-700 font-medium" id="t2-list">
+                        <li>• Monthly Executive Briefing (Signal)</li>
+                        <li>• Bi-Weekly Advisory Strategy Calls</li>
+                        <li>• Tool Stack Efficiency Audit</li>
+                    </ul>
+                    <a href="https://wa.me/971585598906" class="btn-primary px-6 py-4 block text-center uppercase text-[10px] font-bold shadow-lg" id="t2-btn">Request Briefing</a>
+                </div>
+
+                <div class="p-10 bg-white">
+                    <h3 class="text-xl font-bold mb-2" id="t3-name">The Sovereign</h3>
+                    <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest font-bold" id="t3-sub">Full Ops Support</p>
+                    <div class="text-4xl font-bold mb-8">$5,000 <span class="text-xs font-normal text-gray-400">/ mo</span></div>
+                    <ul class="space-y-4 mb-10 text-xs text-gray-500 font-light" id="t3-list">
+                        <li>• Managed AI Operations</li>
+                        <li>• Ongoing Updates & Drift checks</li>
+                        <li>• Priority Support Line</li>
+                    </ul>
+                    <a href="https://wa.me/971585598906" class="btn-outline px-6 py-4 block text-center uppercase text-[10px] font-bold text-xs" id="t3-btn">Scale Care</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="bg-white py-24 px-6 border-t border-gray-100">
         <div class="max-w-xl mx-auto text-center">
-            <h2 class="text-xs uppercase tracking-[0.4em] google-blue-text font-bold mb-4" id="footer-head">Node Request</h2>
-            <p class="text-gray-500 mb-12 text-sm font-medium" id="footer-sub">Submit technical objectives to begin provisioning.</p>
+            <h2 class="text-xs uppercase tracking-[0.4em] google-blue-text font-bold mb-4" id="foot-head">Node Request</h2>
+            <p class="text-gray-500 mb-12 text-sm font-medium" id="foot-sub">Submit technical objectives to begin provisioning.</p>
             <form action="https://formspree.io/f/xdalaodg" method="POST" class="space-y-4 text-left">
-                <button type="submit" class="w-full btn-primary py-4 font-bold uppercase tracking-widest text-[11px]" id="footer-btn">Request Node Provisioning</button>
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="text" name="name" id="f-name" placeholder="Name" required class="w-full p-4 border border-gray-200 rounded-lg outline-none bg-gray-50 text-sm">
+                    <input type="email" name="email" id="f-email" placeholder="Email" required class="w-full p-4 border border-gray-200 rounded-lg outline-none bg-gray-50 text-sm">
+                </div>
+                <textarea name="message" id="f-msg" placeholder="Technical Objectives..." rows="3" class="w-full p-4 border border-gray-200 rounded-lg outline-none bg-gray-50 text-sm"></textarea>
+                <button type="submit" class="w-full btn-primary py-4 font-bold uppercase tracking-widest text-[11px]" id="foot-btn">Request Node Provisioning</button>
             </form>
+            <div class="mt-20 text-[10px] text-gray-300 uppercase tracking-[0.5em] font-bold">
+                claw.ae | Dubai & Global | +971 58 559 8906
+            </div>
         </div>
     </footer>
 
     <script>
         const content = {
             en: {
+                navCap: "Capabilities", navNet: "Network", navDep: "Deployment",
                 heroTitle: "Production-ready OpenClaw & AI infrastructure",
                 heroSub: "Private, hardware-locked AI agents that manage your operations and nourish your growth: zero security risks, 100% private cloud.",
-                btnDeploy: "Request Deployment",
-                btnWa: "WhatsApp Principal",
+                btnDeploy: "Request Deployment", btnWa: "WhatsApp Principal", heroLoc: "Dubai in-person + Remote Worldwide",
+                protoHead: "The Protocol",
                 protocolText: "AI is like water. The <span class='font-bold'>claw team</span> builds the pipes that ensure it flows into the correct part of your business on time and nourishes it.",
+                capTitle: "Autonomous Capabilities", capSub: "ADD USE CASES VIA NATURAL LANGUAGE",
+                netHead: "Potential Pilot Projects & Network",
+                depTitle: "Deployment Tiers",
+                t1Name: "Remote Setup", t1Sub: "First Agent Deployment", t1Btn: "Initiate Setup", t1List: ["• Install + Hardening", "• Unified Workspace Orchestration", "• 14-day Hypercare Support"],
+                t2Tag: "The Filter", t2Name: "The Strategic Partner", t2Sub: "Advisory Retainer", t2Btn: "Request Briefing", t2List: ["• Monthly Executive Briefing (Signal)", "• Bi-Weekly Advisory Strategy Calls", "• Tool Stack Efficiency Audit"],
+                t3Name: "The Sovereign", t3Sub: "Full Ops Support", t3Btn: "Scale Care", t3List: ["• Managed AI Operations", "• Ongoing Updates & Drift checks", "• Priority Support Line"],
+                footHead: "Node Request", footSub: "Submit technical objectives to begin provisioning.", footBtn: "Request Node Provisioning",
+                fName: "Name", fEmail: "Email", fMsg: "Technical Objectives...",
                 waText: "Secure Line: +971 58 559 8906",
-                footerHead: "Node Request",
-                footerSub: "Submit technical objectives to begin provisioning.",
-                footerBtn: "Request Node Provisioning",
-                caps: ["Organize inbox", "Summarize documents", "Track expenses", "Answer tickets", "Negotiate deals", "Manage invoices"]
+                caps: ["Translate real-time", "Organize your inbox", "Answer support tickets", "Summarize documents", "Notify stakeholders", "Do your taxes", "Track expenses", "Manage subscriptions", "Negotiate deals", "Book travel", "...and infinitely more"]
             },
             ar: {
+                navCap: "القدرات", navNet: "الشبكة", navDep: "النشر",
                 heroTitle: "بنية تحتية للذكاء الاصطناعي و OpenClaw جاهزة للإنتاج",
                 heroSub: "وكلاء ذكاء اصطناعي خاصون ومغلقون تقنياً يديرون عملياتك ويغذون نموك: صفر مخاطر أمنية، سحابة خاصة 100٪.",
-                btnDeploy: "طلب النشر",
-                btnWa: "تواصل مع المدير",
+                btnDeploy: "طلب النشر", btnWa: "تواصل مع المدير", heroLoc: "دبي حضورياً + عن بعد عالمياً",
+                protoHead: "البروتوكول",
                 protocolText: "الذكاء الاصطناعي مثل الماء. يقوم <span class='font-bold'>فريق claw</span> ببناء الأنابيب التي تضمن تدفقه إلى الجزء الصحيح من عملك في الوقت المحدد وتغذيته.",
+                capTitle: "القدرات الذاتية", capSub: "أضف حالات الاستخدام عبر اللغة الطبيعية",
+                netHead: "مشاريع رائدة وشبكة شركاء محتملين",
+                depTitle: "مستويات النشر",
+                t1Name: "إعداد عن بعد", t1Sub: "أول نشر للوكيل", t1Btn: "بدء الإعداد", t1List: ["• التثبيت + التأمين التقني", "• تنسيق مساحة العمل الموحدة", "• دعم مكثف لمدة 14 يوماً"],
+                t2Tag: "المصفاة", t2Name: "الشريك الاستراتيجي", t2Sub: "اشتراك استشاري", t2Btn: "طلب إحاطة", t2List: ["• إحاطة تنفيذية شهرية", "• مكالمات استراتيجية نصف شهرية", "• تدقيق كفاءة الأدوات التقنية"],
+                t3Name: "السيادة", t3Sub: "دعم العمليات الكامل", t3Btn: "توسيع الرعاية", t3List: ["• إدارة عمليات الذكاء الاصطناعي", "• تحديثات مستمرة وفحص الانجراف", "• خط دعم الأولوية"],
+                footHead: "طلب عقدة (Node)", footSub: "قدم الأهداف الفنية لبدء عملية التجهيز.", footBtn: "طلب تجهيز العقدة",
+                fName: "الاسم", fEmail: "البريد الإلكتروني", fMsg: "الأهداف الفنية...",
                 waText: "الخط الآمن: +971 58 559 8906",
-                footerHead: "طلب عقدة (Node)",
-                footerSub: "قدم الأهداف الفنية لبدء عملية التجهيز.",
-                footerBtn: "طلب تجهيز العقدة",
-                caps: ["تنظيم البريد", "تلخيص المستندات", "تتبع المصاريف", "الرد على التذاكر", "التفاوض على الصفقات", "إدارة الفواتير"]
+                caps: ["الترجمة الفورية", "تنظيم البريد الوارد", "الرد على التذاكر", "تلخيص المستندات", "إخطار المعنيين", "إدارة الضرائب", "تتبع المصاريف", "إدارة الاشتراكات", "تفاوض الصفقات", "حجز السفر", "...والمزيد بلا حدود"]
             }
         };
 
@@ -121,29 +200,60 @@
             html.setAttribute('dir', newLang === 'ar' ? 'rtl' : 'ltr');
             document.getElementById('langBtn').innerText = newLang === 'ar' ? 'English' : 'العربية';
 
-            // Update Text Nodes
-            document.getElementById('hero-title').innerText = content[newLang].heroTitle;
-            document.getElementById('hero-sub').innerText = content[newLang].heroSub;
-            document.getElementById('btn-deploy').innerText = content[newLang].btnDeploy;
-            document.getElementById('btn-wa').innerText = content[newLang].btnWa;
-            document.getElementById('protocol-text').innerHTML = content[newLang].protocolText;
-            document.getElementById('wa-text').innerText = content[newLang].waText;
-            document.getElementById('footer-head').innerText = content[newLang].footerHead;
-            document.getElementById('footer-sub').innerText = content[newLang].footerSub;
-            document.getElementById('footer-btn').innerText = content[newLang].footerBtn;
+            const langData = content[newLang];
+            
+            // Text Updates
+            document.getElementById('nav-cap').innerText = langData.navCap;
+            document.getElementById('nav-net').innerText = langData.navNet;
+            document.getElementById('nav-dep').innerText = langData.navDep;
+            document.getElementById('hero-title').innerText = langData.heroTitle;
+            document.getElementById('hero-sub').innerText = langData.heroSub;
+            document.getElementById('hero-loc').innerText = langData.heroLoc;
+            document.getElementById('btn-deploy').innerText = langData.btnDeploy;
+            document.getElementById('btn-wa').innerText = langData.btnWa;
+            document.getElementById('proto-head').innerText = langData.protoHead;
+            document.getElementById('protocol-text').innerHTML = langData.protocolText;
+            document.getElementById('cap-title').innerText = langData.capTitle;
+            document.getElementById('cap-sub').innerText = langData.capSub;
+            document.getElementById('net-head').innerText = langData.netHead;
+            document.getElementById('dep-title').innerText = langData.depTitle;
+            
+            // Tiers Updates
+            document.getElementById('t1-name').innerText = langData.t1Name;
+            document.getElementById('t1-sub').innerText = langData.t1Sub;
+            document.getElementById('t1-btn').innerText = langData.t1Btn;
+            document.getElementById('t1-list').innerHTML = langData.t1List.map(li => `<li>${li}</li>`).join('');
+            
+            document.getElementById('t2-tag').innerText = langData.t2Tag;
+            document.getElementById('t2-name').innerText = langData.t2Name;
+            document.getElementById('t2-sub').innerText = langData.t2Sub;
+            document.getElementById('t2-btn').innerText = langData.btnDeploy; // Keep generic or specific
+            document.getElementById('t2-list').innerHTML = langData.t2List.map(li => `<li>${li}</li>`).join('');
+            
+            document.getElementById('t3-name').innerText = langData.t3Name;
+            document.getElementById('t3-sub').innerText = langData.t3Sub;
+            document.getElementById('t3-btn').innerText = langData.t3Btn;
+            document.getElementById('t3-list').innerHTML = langData.t3List.map(li => `<li>${li}</li>`).join('');
 
-            // Update Nav Links
-            document.querySelectorAll('nav a').forEach(a => {
-                a.innerText = a.getAttribute(`data-${newLang}`);
-            });
+            // Footer Updates
+            document.getElementById('foot-head').innerText = langData.footHead;
+            document.getElementById('foot-sub').innerText = langData.footSub;
+            document.getElementById('foot-btn').innerText = langData.footBtn;
+            document.getElementById('f-name').placeholder = langData.fName;
+            document.getElementById('f-email').placeholder = langData.fEmail;
+            document.getElementById('f-msg').placeholder = langData.fMsg;
+            document.getElementById('wa-text').innerText = langData.waText;
 
-            // Update Caps
-            const capsGrid = document.getElementById('caps-grid');
-            capsGrid.innerHTML = content[newLang].caps.map(c => `<div class="cap-pill">${c}</div>`).join('');
+            // Caps Grid Updates
+            const grid = document.getElementById('caps-grid');
+            grid.innerHTML = langData.caps.map((c, i) => {
+                let op = i < 4 ? '' : (i < 8 ? 'opacity-60' : 'opacity-30');
+                return `<div class="cap-pill ${op}">${c}</div>`;
+            }).join('');
         }
 
-        // Initialize Caps
-        toggleLanguage(); toggleLanguage(); // Force refresh to EN first
+        // Init Grid
+        toggleLanguage(); toggleLanguage();
     </script>
 </body>
 </html>
