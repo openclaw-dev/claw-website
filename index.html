@@ -19,24 +19,23 @@
             box-shadow: 0 4px 10px rgba(0,0,0,0.3); text-decoration: none; font-size: 13px;
         }
         .logo-text { letter-spacing: -0.5px; font-weight: 700; font-size: 1.5rem; }
+        /* Capabilities Styling */
+        .cap-pill { background: #1a1a1a; border: 1px solid #333; color: #ccc; border-radius: 50px; padding: 8px 16px; font-size: 12px; display: inline-block; margin: 4px; }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/971585598906" class="wa-float">
-        Secure Line: +971 58 559 8906
-    </a>
+    <a href="https://wa.me/971585598906" class="wa-float">Secure Line: +971 58 559 8906</a>
 
     <nav class="sticky top-0 bg-white border-b border-gray-200 z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="google-blue-text">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor"/>
-                </svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="google-blue-text"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor"/></svg>
                 <span class="logo-text text-[#202124]">claw<span class="google-blue-text">.ae</span></span>
             </div>
             <div class="hidden md:flex space-x-8 text-[11px] uppercase tracking-[0.2em] font-bold">
                 <a href="#protocol" class="hover:text-blue-600 transition">The Protocol</a>
+                <a href="#capabilities" class="hover:text-blue-600 transition">Capabilities</a>
                 <a href="#partners" class="hover:text-blue-600 transition">Partners</a>
                 <a href="#engagement" class="hover:text-blue-600 transition text-gray-400">Engagement</a>
                 <a href="#access" class="google-blue-text border-b-2 border-blue-600 pb-1">Access Point</a>
@@ -45,12 +44,8 @@
     </nav>
 
     <section class="py-24 px-6 text-center max-w-5xl mx-auto">
-        <h1 class="text-4xl md:text-6xl font-bold mb-8 tracking-tight italic text-[#202124]">
-            Production-Ready <span class="google-blue-text">OpenClaw</span> & AI Infrastructure
-        </h1>
-        <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto font-light">
-            We deploy private, hardware-locked AI agents that clear your inbox, manage your operations, and nourish your growth: zero security risks, 100% private cloud.
-        </p>
+        <h1 class="text-4xl md:text-6xl font-bold mb-8 tracking-tight italic text-[#202124]">Production-Ready <span class="google-blue-text">OpenClaw</span> & AI Infrastructure</h1>
+        <p class="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto font-light">We deploy private, hardware-locked AI agents that clear your inbox, manage your operations, and nourish your growth: zero security risks, 100% private cloud.</p>
         <div class="flex flex-col md:flex-row justify-center gap-4">
             <a href="#engagement" class="btn-primary px-10 py-4 text-sm shadow-md">Deploy Infrastructure</a>
             <a href="https://wa.me/971585598906" class="btn-outline px-10 py-4 text-sm">WhatsApp the Principal</a>
@@ -61,9 +56,31 @@
     <section id="protocol" class="py-20 bg-gray-50 px-6 border-y border-gray-100">
         <div class="max-w-4xl mx-auto text-center">
             <h2 class="text-xs uppercase tracking-[0.4em] google-blue-text font-bold mb-4 italic">The Protocol</h2>
-            <p class="text-2xl md:text-3xl text-gray-800 font-light leading-snug">
-                AI is like water. The <span class="font-bold">claw team</span> builds the pipes that ensure it flows into the correct part of your business on time and nourishes it.
-            </p>
+            <p class="text-2xl md:text-3xl text-gray-800 font-light leading-snug">AI is like water. The <span class="font-bold">claw team</span> builds the pipes that ensure it flows into the correct part of your business on time and nourishes it.</p>
+        </div>
+    </section>
+
+    <section id="capabilities" class="py-24 bg-[#0a0a0a] text-white px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">What can your OpenClaw Node do?</h2>
+            <p class="text-gray-400 mb-12 font-light">One private assistant, thousands of secure use cases.</p>
+            
+            <div class="flex flex-wrap justify-center max-w-4xl mx-auto">
+                <div class="cap-pill">Organize your inbox</div>
+                <div class="cap-pill">Summarize long documents</div>
+                <div class="cap-pill">Answer support tickets</div>
+                <div class="cap-pill">Track expenses and receipts</div>
+                <div class="cap-pill">Manage subscriptions</div>
+                <div class="cap-pill">Negotiate deals</div>
+                <div class="cap-pill">Draft job descriptions</div>
+                <div class="cap-pill">Screen cold outreach</div>
+                <div class="cap-pill">Run standup summaries</div>
+                <div class="cap-pill">Track OKRs and KPIs</div>
+                <div class="cap-pill">Book travel and hotels</div>
+                <div class="cap-pill">Create presentations from points</div>
+                <div class="cap-pill">Find discount codes</div>
+                <div class="cap-pill">Compare product specs</div>
+            </div>
         </div>
     </section>
 
@@ -83,40 +100,37 @@
         <div class="max-w-7xl mx-auto">
             <h2 class="text-center text-4xl font-bold mb-16 italic text-[#202124]">Engagement & Care</h2>
             <div class="grid md:grid-cols-3 gap-0 border border-gray-200 rounded-xl overflow-hidden shadow-2xl bg-white">
-                
                 <div class="p-10 border-b md:border-b-0 md:border-r border-gray-100">
                     <h3 class="text-xl font-bold mb-2">Remote Setup</h3>
                     <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest font-bold">First Agent Deployment</p>
                     <div class="text-4xl font-bold mb-8">$1,200</div>
                     <ul class="space-y-4 mb-10 text-xs text-gray-500 font-light">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-300 rounded-full mr-3"></span> Install + Hardening</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-300 rounded-full mr-3"></span> Email + Calendar Integration</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-300 rounded-full mr-3"></span> 14-day Hypercare Support</li>
+                        <li>• Install + Hardening</li>
+                        <li>• Unified Workspace Orchestration</li>
+                        <li>• 14-day Hypercare Support</li>
                     </ul>
                     <a href="https://wa.me/971585598906" class="btn-outline px-6 py-4 block text-center uppercase text-[10px] font-bold tracking-widest">Deploy Remote</a>
                 </div>
-
                 <div class="p-10 border-b md:border-b-0 md:border-r border-gray-100 bg-blue-50 relative">
                     <div class="absolute top-0 right-0 bg-blue-600 text-white px-4 py-1 text-[9px] font-bold uppercase tracking-widest">The Filter</div>
-                    <h3 class="text-xl font-bold mb-2">The Strategic Partner</h3>
+                    <h3 class="text-xl font-bold mb-2">Strategic Partner</h3>
                     <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest font-bold">Advisory Retainer</p>
-                    <div class="text-4xl font-bold mb-8">$2,500 <span class="text-xs font-normal text-gray-400 font-sans tracking-tight">/ mo</span></div>
+                    <div class="text-4xl font-bold mb-8">$2,500<span class="text-sm font-normal"> / mo</span></div>
                     <ul class="space-y-4 mb-10 text-xs text-gray-700 font-medium">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span> Monthly Executive Briefing (Signal)</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span> Bi-Weekly Advisory Strategy Calls</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full mr-3"></span> Tool Stack Efficiency Audit</li>
+                        <li>• Monthly Executive Briefing</li>
+                        <li>• Bi-Weekly Strategy Calls</li>
+                        <li>• Tool Stack Efficiency Audit</li>
                     </ul>
                     <a href="https://wa.me/971585598906" class="btn-primary px-6 py-4 block text-center uppercase text-[10px] font-bold tracking-widest shadow-lg">Request Briefing</a>
                 </div>
-
                 <div class="p-10 bg-white">
                     <h3 class="text-xl font-bold mb-2">The Sovereign</h3>
                     <p class="text-gray-400 mb-8 text-[10px] uppercase tracking-widest font-bold">Full Ops Support</p>
-                    <div class="text-4xl font-bold mb-8">$5,000 <span class="text-xs font-normal text-gray-400 font-sans tracking-tight">/ mo</span></div>
+                    <div class="text-4xl font-bold mb-8">$5,000<span class="text-sm font-normal"> / mo</span></div>
                     <ul class="space-y-4 mb-10 text-xs text-gray-500 font-light">
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-300 rounded-full mr-3"></span> Managed AI Operations</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-300 rounded-full mr-3"></span> Ongoing Updates & Drift checks</li>
-                        <li class="flex items-center"><span class="w-1.5 h-1.5 bg-gray-300 rounded-full mr-3"></span> 24/7 Priority Support Line</li>
+                        <li>• Managed AI Operations</li>
+                        <li>• Ongoing Updates & Drift checks</li>
+                        <li>• Priority Support Line</li>
                     </ul>
                     <a href="https://wa.me/971585598906" class="btn-outline px-6 py-4 block text-center uppercase text-[10px] font-bold tracking-widest text-xs">Scale Care</a>
                 </div>
@@ -127,20 +141,16 @@
     <footer id="access" class="bg-white py-24 px-6 border-t border-gray-100">
         <div class="max-w-xl mx-auto text-center">
             <h2 class="text-xs uppercase tracking-[0.4em] google-blue-text font-bold mb-4 italic">Access Point</h2>
-            <p class="text-gray-500 mb-12 text-sm font-medium">Selective Deployment: We evaluate partners based on their readiness for hardware-locked sovereignty and operational integrity.</p>
-            
+            <p class="text-gray-500 mb-12 text-sm font-medium">Selective Deployment: We evaluate partners based on their readiness for hardware-locked sovereignty.</p>
             <form action="https://formspree.io/f/xdalaodg" method="POST" class="space-y-4 text-left">
                 <div class="grid grid-cols-2 gap-4">
-                    <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 border border-gray-200 rounded-lg outline-none focus:border-blue-500 text-sm transition bg-gray-50">
-                    <input type="email" name="email" placeholder="Professional Email" required class="w-full p-4 border border-gray-200 rounded-lg outline-none focus:border-blue-500 text-sm transition bg-gray-50">
+                    <input type="text" name="name" placeholder="Full Name" required class="w-full p-4 border border-gray-200 rounded-lg outline-none focus:border-blue-500 text-sm bg-gray-50">
+                    <input type="email" name="email" placeholder="Professional Email" required class="w-full p-4 border border-gray-200 rounded-lg outline-none focus:border-blue-500 text-sm bg-gray-50">
                 </div>
-                <textarea name="message" placeholder="Briefly describe your current technical objectives..." rows="3" class="w-full p-4 border border-gray-200 rounded-lg outline-none focus:border-blue-500 text-sm transition bg-gray-50"></textarea>
-                <button type="submit" class="w-full btn-primary py-4 font-bold uppercase tracking-widest text-[11px] shadow-sm">Request Intake Interview</button>
+                <textarea name="message" placeholder="Technical objectives..." rows="3" class="w-full p-4 border border-gray-200 rounded-lg outline-none focus:border-blue-500 text-sm bg-gray-50"></textarea>
+                <button type="submit" class="w-full btn-primary py-4 font-bold uppercase tracking-widest text-[11px]">Request Intake Interview</button>
             </form>
-            
-            <div class="mt-20 text-[10px] text-gray-300 uppercase tracking-[0.5em] font-bold">
-                claw.ae | Dubai & Global | Secure Line: +971 58 559 8906
-            </div>
+            <div class="mt-20 text-[10px] text-gray-300 uppercase tracking-[0.5em] font-bold">claw.ae | Dubai & Global | +971 58 559 8906</div>
         </div>
     </footer>
 
