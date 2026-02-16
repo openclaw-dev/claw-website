@@ -15,7 +15,16 @@
         .btn-outline { border: 1px solid #dadce0; color: #1a73e8; border-radius: 4px; font-weight: 500; }
         .logo-text { letter-spacing: -0.5px; font-weight: 700; font-size: 1.5rem; }
         .cap-pill { background: #1a1a1a; border: 1px solid #333; color: #ccc; border-radius: 50px; padding: 8px 16px; font-size: 12px; display: inline-block; margin: 4px; transition: all 0.2s; }
+        
+        /* Language Switcher Styling */
         .lang-switch { cursor: pointer; font-weight: bold; font-size: 11px; border: 1px solid #dadce0; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
+        
+        /* Fixed Phone Number Directionality */
+        .phone-number { direction: ltr; unicode-bidi: isolate; display: inline-block; }
+
+        /* Navigation Spacing for Arabic */
+        [lang="ar"] .nav-link { margin-left: 2rem; margin-right: 2rem; letter-spacing: 0.05em; }
+
         .wa-float {
             position: fixed; bottom: 30px; right: 30px; background-color: #1a73e8; color: white;
             padding: 12px 24px; border-radius: 50px; font-weight: 500; z-index: 1000;
@@ -26,7 +35,9 @@
 </head>
 <body>
 
-    <a href="https://wa.me/971585598906" class="wa-float" id="wa-text">Secure Line: +971 58 559 8906</a>
+    <a href="https://wa.me/971585598906" class="wa-float" id="wa-text-container">
+        <span id="wa-label">Secure Line: </span><span class="phone-number">+971 58 559 8906</span>
+    </a>
 
     <nav class="sticky top-0 bg-white border-b border-gray-200 z-50">
         <div class="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
@@ -34,11 +45,11 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="google-blue-text"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="currentColor"/></svg>
                 <span class="logo-text text-[#202124]">claw<span class="google-blue-text">.ae</span></span>
             </div>
-            <div class="hidden md:flex items-center space-x-8 text-[11px] uppercase tracking-[0.2em] font-bold">
-                <a href="#capabilities" id="nav-cap">Capabilities</a>
-                <a href="#network" id="nav-net">Network</a>
-                <a href="#deployment" id="nav-dep">Deployment</a>
-                <div class="lang-switch google-blue-text" onclick="toggleLanguage()" id="langBtn">العربية</div>
+            <div class="hidden md:flex items-center text-[11px] uppercase tracking-[0.2em] font-bold">
+                <a href="#capabilities" id="nav-cap" class="nav-link mx-4 hover:text-blue-600 transition">Capabilities</a>
+                <a href="#network" id="nav-net" class="nav-link mx-4 hover:text-blue-600 transition">Network</a>
+                <a href="#deployment" id="nav-dep" class="nav-link mx-4 hover:text-blue-600 transition">Deployment</a>
+                <div class="lang-switch google-blue-text ml-4" onclick="toggleLanguage()" id="langBtn">العربية</div>
             </div>
         </div>
     </nav>
@@ -80,10 +91,10 @@
         <div class="max-w-7xl mx-auto">
             <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-[0.3em] mb-12" id="net-head">Potential Pilot Projects & Network</p>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-70 grayscale hover:grayscale-0 transition duration-500 text-center font-bold text-gray-600">
-                <div>Digital Dubai</div>
-                <div>Property Finder</div>
-                <div>MDLBEAST</div>
-                <div class="italic">DBA Partners</div>
+                <div id="net-1">Digital Dubai</div>
+                <div id="net-2">Property Finder</div>
+                <div id="net-3">MDLBEAST</div>
+                <div id="net-4" class="italic">DBA Partners</div>
             </div>
         </div>
     </section>
@@ -146,7 +157,7 @@
                 <button type="submit" class="w-full btn-primary py-4 font-bold uppercase tracking-widest text-[11px]" id="foot-btn">Request Node Provisioning</button>
             </form>
             <div class="mt-20 text-[10px] text-gray-300 uppercase tracking-[0.5em] font-bold">
-                claw.ae | Dubai & Global | +971 58 559 8906
+                claw.ae | Dubai & Global | <span class="phone-number">+971 58 559 8906</span>
             </div>
         </div>
     </footer>
@@ -162,13 +173,14 @@
                 protocolText: "AI is like water. The <span class='font-bold'>claw team</span> builds the pipes that ensure it flows into the correct part of your business on time and nourishes it.",
                 capTitle: "Autonomous Capabilities", capSub: "ADD USE CASES VIA NATURAL LANGUAGE",
                 netHead: "Potential Pilot Projects & Network",
+                net1: "Digital Dubai", net2: "Property Finder", net3: "MDLBEAST", net4: "DBA Partners",
                 depTitle: "Deployment Tiers",
                 t1Name: "Remote Setup", t1Sub: "First Agent Deployment", t1Btn: "Initiate Setup", t1List: ["• Install + Hardening", "• Unified Workspace Orchestration", "• 14-day Hypercare Support"],
                 t2Tag: "The Filter", t2Name: "The Strategic Partner", t2Sub: "Advisory Retainer", t2Btn: "Request Briefing", t2List: ["• Monthly Executive Briefing (Signal)", "• Bi-Weekly Advisory Strategy Calls", "• Tool Stack Efficiency Audit"],
                 t3Name: "The Sovereign", t3Sub: "Full Ops Support", t3Btn: "Scale Care", t3List: ["• Managed AI Operations", "• Ongoing Updates & Drift checks", "• Priority Support Line"],
                 footHead: "Node Request", footSub: "Submit technical objectives to begin provisioning.", footBtn: "Request Node Provisioning",
                 fName: "Name", fEmail: "Email", fMsg: "Technical Objectives...",
-                waText: "Secure Line: +971 58 559 8906",
+                waLabel: "Secure Line: ",
                 caps: ["Translate real-time", "Organize your inbox", "Answer support tickets", "Summarize documents", "Notify stakeholders", "Do your taxes", "Track expenses", "Manage subscriptions", "Negotiate deals", "Book travel", "...and infinitely more"]
             },
             ar: {
@@ -180,13 +192,14 @@
                 protocolText: "الذكاء الاصطناعي مثل الماء. يقوم <span class='font-bold'>فريق claw</span> ببناء الأنابيب التي تضمن تدفقه إلى الجزء الصحيح من عملك في الوقت المحدد وتغذيته.",
                 capTitle: "القدرات الذاتية", capSub: "أضف حالات الاستخدام عبر اللغة الطبيعية",
                 netHead: "مشاريع رائدة وشبكة شركاء محتملين",
+                net1: "دبي الرقمية", net2: "بروبرتي فايندر", net3: "مدل بيست", net4: "شركاء DBA",
                 depTitle: "مستويات النشر",
                 t1Name: "إعداد عن بعد", t1Sub: "أول نشر للوكيل", t1Btn: "بدء الإعداد", t1List: ["• التثبيت + التأمين التقني", "• تنسيق مساحة العمل الموحدة", "• دعم مكثف لمدة 14 يوماً"],
                 t2Tag: "المصفاة", t2Name: "الشريك الاستراتيجي", t2Sub: "اشتراك استشاري", t2Btn: "طلب إحاطة", t2List: ["• إحاطة تنفيذية شهرية", "• مكالمات استراتيجية نصف شهرية", "• تدقيق كفاءة الأدوات التقنية"],
                 t3Name: "السيادة", t3Sub: "دعم العمليات الكامل", t3Btn: "توسيع الرعاية", t3List: ["• إدارة عمليات الذكاء الاصطناعي", "• تحديثات مستمرة وفحص الانجراف", "• خط دعم الأولوية"],
                 footHead: "طلب عقدة (Node)", footSub: "قدم الأهداف الفنية لبدء عملية التجهيز.", footBtn: "طلب تجهيز العقدة",
                 fName: "الاسم", fEmail: "البريد الإلكتروني", fMsg: "الأهداف الفنية...",
-                waText: "الخط الآمن: +971 58 559 8906",
+                waLabel: "الخط الآمن: ",
                 caps: ["الترجمة الفورية", "تنظيم البريد الوارد", "الرد على التذاكر", "تلخيص المستندات", "إخطار المعنيين", "إدارة الضرائب", "تتبع المصاريف", "إدارة الاشتراكات", "تفاوض الصفقات", "حجز السفر", "...والمزيد بلا حدود"]
             }
         };
@@ -202,10 +215,12 @@
 
             const langData = content[newLang];
             
-            // Text Updates
+            // Nav Link Spacing and Text
             document.getElementById('nav-cap').innerText = langData.navCap;
             document.getElementById('nav-net').innerText = langData.navNet;
             document.getElementById('nav-dep').innerText = langData.navDep;
+
+            // Hero and Protocol
             document.getElementById('hero-title').innerText = langData.heroTitle;
             document.getElementById('hero-sub').innerText = langData.heroSub;
             document.getElementById('hero-loc').innerText = langData.heroLoc;
@@ -213,12 +228,20 @@
             document.getElementById('btn-wa').innerText = langData.btnWa;
             document.getElementById('proto-head').innerText = langData.protoHead;
             document.getElementById('protocol-text').innerHTML = langData.protocolText;
+            
+            // Capabilities
             document.getElementById('cap-title').innerText = langData.capTitle;
             document.getElementById('cap-sub').innerText = langData.capSub;
+
+            // Network
             document.getElementById('net-head').innerText = langData.netHead;
+            document.getElementById('net-1').innerText = langData.net1;
+            document.getElementById('net-2').innerText = langData.net2;
+            document.getElementById('net-3').innerText = langData.net3;
+            document.getElementById('net-4').innerText = langData.net4;
+
+            // Tiers
             document.getElementById('dep-title').innerText = langData.depTitle;
-            
-            // Tiers Updates
             document.getElementById('t1-name').innerText = langData.t1Name;
             document.getElementById('t1-sub').innerText = langData.t1Sub;
             document.getElementById('t1-btn').innerText = langData.t1Btn;
@@ -227,7 +250,7 @@
             document.getElementById('t2-tag').innerText = langData.t2Tag;
             document.getElementById('t2-name').innerText = langData.t2Name;
             document.getElementById('t2-sub').innerText = langData.t2Sub;
-            document.getElementById('t2-btn').innerText = langData.btnDeploy; // Keep generic or specific
+            document.getElementById('t2-btn').innerText = langData.t2Btn;
             document.getElementById('t2-list').innerHTML = langData.t2List.map(li => `<li>${li}</li>`).join('');
             
             document.getElementById('t3-name').innerText = langData.t3Name;
@@ -235,16 +258,16 @@
             document.getElementById('t3-btn').innerText = langData.t3Btn;
             document.getElementById('t3-list').innerHTML = langData.t3List.map(li => `<li>${li}</li>`).join('');
 
-            // Footer Updates
+            // Footer and WhatsApp
             document.getElementById('foot-head').innerText = langData.footHead;
             document.getElementById('foot-sub').innerText = langData.footSub;
             document.getElementById('foot-btn').innerText = langData.footBtn;
             document.getElementById('f-name').placeholder = langData.fName;
             document.getElementById('f-email').placeholder = langData.fEmail;
             document.getElementById('f-msg').placeholder = langData.fMsg;
-            document.getElementById('wa-text').innerText = langData.waText;
+            document.getElementById('wa-label').innerText = langData.waLabel;
 
-            // Caps Grid Updates
+            // Caps Grid
             const grid = document.getElementById('caps-grid');
             grid.innerHTML = langData.caps.map((c, i) => {
                 let op = i < 4 ? '' : (i < 8 ? 'opacity-60' : 'opacity-30');
@@ -252,7 +275,7 @@
             }).join('');
         }
 
-        // Init Grid
+        // Initialize to English
         toggleLanguage(); toggleLanguage();
     </script>
 </body>
