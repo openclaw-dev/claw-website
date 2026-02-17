@@ -26,6 +26,21 @@
   --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Google Sans", "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
+  /* Radii */
+  --radius-chip: 999px;
+  --radius-card: 1.5rem;
+  --radius-control: 999px;
+
+  /* Shadows */
+  --shadow-soft: 0 18px 60px rgba(15, 23, 42, 0.22);
+  --shadow-subtle: 0 10px 30px rgba(15, 23, 42, 0.16);
+
+  /* Motion tokens */
+  --motion-duration-fast: 120ms;
+  --motion-duration-default: 220ms;
+  --motion-duration-reveal: 700ms;
+  --motion-ease-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+
   /* Motion */
   --animate-fade-up: fade-up 0.7s ease-out both;
   --animate-fade-in: fade-in 0.7s ease-out both;
@@ -98,6 +113,7 @@
   @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3 text-sm font-semibold tracking-tight transition
     will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-iris-500/70
     focus-visible:ring-offset-2 focus-visible:ring-offset-black/0;
+  border-radius: var(--radius-control);
 }
 
 @layer components {
@@ -115,6 +131,8 @@
 
   .glass {
     @apply bg-white/70 ring-1 ring-black/5 backdrop-blur-xl dark:bg-white/5 dark:ring-white/10;
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-subtle);
   }
 
   .nav-link {
@@ -128,7 +146,9 @@
   .reveal {
     opacity: 0;
     transform: translateY(10px);
-    transition: opacity 700ms ease, transform 700ms ease;
+    transition:
+      opacity var(--motion-duration-reveal) var(--motion-ease-standard),
+      transform var(--motion-duration-reveal) var(--motion-ease-standard);
   }
 
   .reveal.is-visible {
