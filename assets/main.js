@@ -25,7 +25,6 @@
     en: {
       navCap: "Capabilities",
       navNet: "Network",
-      navDep: "Deployment",
       navPricing: "Pricing",
       navTestimonials: "Signal",
 
@@ -33,8 +32,8 @@
       heroSub:
         "Private, hardware-locked AI agents that manage your operations and nourish your growth: zero security risks, 100% private cloud.",
       btnDeploy: "Request Deployment",
-      btnWa: "WhatsApp Principal",
-      heroLoc: "Dubai in-person + Remote Worldwide",
+      btnWa: "Talk to Principal",
+      heroLoc: "Dubai in-person + Remote Worldwide · Private by design",
 
       protoHead: "The Protocol",
       protocolText:
@@ -49,7 +48,6 @@
       net3: "MDLBEAST",
       net4: "DBA Partners",
 
-      depTitle: "Deployment Tiers",
       t1Name: "Remote Setup",
       t1Sub: "First Agent Deployment",
       t1Btn: "Initiate Setup",
@@ -91,7 +89,6 @@
     ar: {
       navCap: "القدرات",
       navNet: "الشبكة",
-      navDep: "النشر",
       navPricing: "الأسعار",
       navTestimonials: "الإشارات",
 
@@ -100,7 +97,7 @@
         "وكلاء ذكاء اصطناعي خاصون ومغلقون تقنياً يديرون عملياتك ويغذون نموك: صفر مخاطر أمنية، سحابة خاصة 100٪.",
       btnDeploy: "طلب النشر",
       btnWa: "تواصل مع المدير",
-      heroLoc: "دبي حضورياً + عن بُعد عالمياً",
+      heroLoc: "دبي حضورياً + عن بُعد عالمياً · خصوصية افتراضية",
 
       protoHead: "البروتوكول",
       protocolText:
@@ -115,7 +112,6 @@
       net3: "مدل بيست",
       net4: "شركاء DBA",
 
-      depTitle: "مستويات النشر",
       t1Name: "إعداد عن بُعد",
       t1Sub: "أول نشر للوكيل",
       t1Btn: "بدء الإعداد",
@@ -174,7 +170,6 @@
     // Nav
     setElText("nav-cap", langData.navCap);
     setElText("nav-net", langData.navNet);
-    setElText("nav-dep", langData.navDep);
     setElText("nav-pricing", langData.navPricing);
     setElText("nav-testimonials", langData.navTestimonials);
 
@@ -197,7 +192,6 @@
     setElText("net-3", langData.net3);
     setElText("net-4", langData.net4);
 
-    setElText("dep-title", langData.depTitle);
     setElText("t1-name", langData.t1Name);
     setElText("t1-sub", langData.t1Sub);
     setElText("t1-btn", langData.t1Btn);
@@ -246,7 +240,10 @@
 
     // Toggle button label
     const langBtn = document.getElementById("langBtn");
-    if (langBtn) langBtn.textContent = lang === "ar" ? "English" : "العربية";
+    if (langBtn) {
+      langBtn.textContent = lang === "ar" ? "🇸🇦" : "🇺🇸";
+      langBtn.setAttribute("aria-label", lang === "ar" ? "Switch language to English" : "تبديل اللغة إلى العربية");
+    }
   }
 
   function initLanguageToggle() {
@@ -257,26 +254,6 @@
       setLanguage(next);
       // Re-register reveals for newly injected pills
       requestAnimationFrame(() => initScrollReveal(true));
-    });
-  }
-
-  function initThemeToggle() {
-    const btn = document.getElementById("themeBtn");
-    if (!btn) return;
-
-    const setIcon = () => {
-      const isDark = document.documentElement.classList.contains("dark");
-      btn.setAttribute("aria-pressed", isDark ? "true" : "false");
-      btn.title = isDark ? "Switch to light mode" : "Switch to dark mode";
-    };
-
-    setIcon();
-    btn.addEventListener("click", () => {
-      const html = document.documentElement;
-      const nextIsDark = !html.classList.contains("dark");
-      html.classList.toggle("dark", nextIsDark);
-      localStorage.setItem(STORAGE.theme, nextIsDark ? "dark" : "light");
-      setIcon();
     });
   }
 
@@ -296,7 +273,7 @@
           revealObserver.unobserve(e.target);
         }
       },
-      { threshold: 0.12, rootMargin: "40px 0px -10% 0px" },
+      { threshold: 0.12, rootMargin: "0px 0px -10% 0px" },
     );
 
     els.forEach((el) => revealObserver.observe(el));
@@ -344,7 +321,7 @@
   }
 
   function initActiveNav() {
-    const sectionIds = ["capabilities", "network", "pricing", "testimonials", "deployment"];
+    const sectionIds = ["capabilities", "network", "pricing", "testimonials", "faq"];
     const links = new Map(sectionIds.map((id) => [id, $(`a[href="#${id}"]`)]));
     const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean);
     if (sections.length === 0) return;
@@ -361,7 +338,7 @@
           link.setAttribute("aria-current", sid === id ? "true" : "false");
         }
       },
-      { rootMargin: "-30% 0px -55% 0px", threshold: [0.05, 0.15, 0.3] },
+      { rootMargin: "-40% 0px -45% 0px", threshold: [0.1, 0.2, 0.35] },
     );
 
     sections.forEach((s) => obs.observe(s));
@@ -546,7 +523,6 @@
     initLanguageToggle();
 
     // UI systems
-    initThemeToggle();
     initScrollReveal();
     initCounters();
     initActiveNav();
