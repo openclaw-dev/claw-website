@@ -241,7 +241,7 @@
     // Toggle button label
     const langBtn = document.getElementById("langBtn");
     if (langBtn) {
-      langBtn.textContent = lang === "ar" ? "🇸🇦" : "🇺🇸";
+      langBtn.textContent = lang === "ar" ? "🇦🇪" : "🇬🇧";
       langBtn.setAttribute("aria-label", lang === "ar" ? "Switch language to English" : "تبديل اللغة إلى العربية");
     }
   }
@@ -387,109 +387,7 @@
   }
 
   function initTestimonialsCarousel() {
-    const track = document.getElementById("testimonialsTrack");
-    const prev = document.getElementById("testimonialsPrev");
-    const next = document.getElementById("testimonialsNext");
-    const dots = document.getElementById("testimonialsDots");
-    const toggle = document.getElementById("testimonialsToggle");
-    if (!track || !dots) return;
-
-    const cards = $$("[data-testimonial-card]", track);
-    if (cards.length === 0) return;
-
-    let index = 0;
-    let autoplay = false;
-    const prefersReducedMotion =
-      typeof window !== "undefined" &&
-      "matchMedia" in window &&
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    const renderDots = () => {
-      dots.innerHTML = cards
-        .map((_, i) => {
-          const active = i === index;
-          return `<button class="h-2 w-2 rounded-full ${active ? "bg-white" : "bg-white/30"} transition" aria-label="Go to testimonial ${
-            i + 1
-          }" data-dot="${i}"></button>`;
-        })
-        .join("");
-      $$("[data-dot]", dots).forEach((b) => {
-        b.addEventListener("click", () => scrollTo(Number(b.getAttribute("data-dot") || "0")));
-      });
-    };
-
-    const scrollTo = (i) => {
-      index = Math.max(0, Math.min(cards.length - 1, i));
-      cards[index].scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
-      renderDots();
-    };
-
-    const onPrev = () => scrollTo(index - 1);
-    const onNext = () => scrollTo(index + 1);
-    if (prev) prev.addEventListener("click", onPrev);
-    if (next) next.addEventListener("click", onNext);
-
-    let raf = 0;
-    track.addEventListener(
-      "scroll",
-      () => {
-        cancelAnimationFrame(raf);
-        raf = requestAnimationFrame(() => {
-          const centers = cards.map((c) => {
-            const r = c.getBoundingClientRect();
-            return Math.abs(r.left + r.width / 2 - window.innerWidth / 2);
-          });
-          const nearest = centers.indexOf(Math.min(...centers));
-          if (nearest !== -1 && nearest !== index) {
-            index = nearest;
-            renderDots();
-          }
-        });
-      },
-      { passive: true },
-    );
-
-    renderDots();
-
-    // Autoplay with accessible toggle, disabled when reduced motion is preferred
-    let intervalId = 0;
-    const updateToggleLabel = () => {
-      if (!toggle) return;
-      toggle.setAttribute("aria-pressed", autoplay ? "true" : "false");
-      toggle.textContent = autoplay ? "Autoplay on" : "Autoplay off";
-    };
-
-    const startAutoplay = () => {
-      if (prefersReducedMotion || autoplay || cards.length <= 1) return;
-      autoplay = true;
-      updateToggleLabel();
-      intervalId = window.setInterval(() => {
-        const nextIndex = (index + 1) % cards.length;
-        scrollTo(nextIndex);
-      }, 7000);
-    };
-
-    const stopAutoplay = () => {
-      autoplay = false;
-      updateToggleLabel();
-      if (intervalId) {
-        window.clearInterval(intervalId);
-        intervalId = 0;
-      }
-    };
-
-    if (toggle) {
-      toggle.addEventListener("click", () => {
-        if (autoplay) {
-          stopAutoplay();
-        } else {
-          startAutoplay();
-        }
-      });
-    }
-
-    // Start autoplay by default unless reduced motion is requested
-    if (!prefersReducedMotion) startAutoplay();
+    // No JS needed: testimonials use native horizontal scrolling with CSS snap points.
   }
 
   function initHeroParallax() {

@@ -16,24 +16,6 @@
       rel="stylesheet"
     />
 
-    <!-- Prevent theme flash (Tailwind dark variant is class-driven). -->
-    <script>
-      (function () {
-        try {
-          var theme = localStorage.getItem("theme");
-          var dark =
-            theme === "dark" ||
-            (!theme && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches);
-          document.documentElement.classList.toggle("dark", !!dark);
-          var lang = localStorage.getItem("lang");
-          if (lang === "ar" || lang === "en") {
-            document.documentElement.setAttribute("lang", lang);
-            document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
-          }
-        } catch (e) {}
-      })();
-    </script>
-
     <link href="./assets/styles.css" rel="stylesheet" />
     <script src="./assets/main.js" defer></script>
   </head>
@@ -327,64 +309,42 @@
               </p>
             </div>
 
-            <div class="flex items-center gap-2" data-reveal>
-              <button
-                id="testimonialsPrev"
-                type="button"
-                class="rounded-2xl bg-black/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-gray-900 ring-1 ring-black/10 hover:bg-black/8 dark:bg-white/5 dark:text-white dark:ring-white/10"
-                aria-label="Previous testimonial"
-              >
-                Prev
-              </button>
-              <button
-                id="testimonialsNext"
-                type="button"
-                class="rounded-2xl bg-black/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.22em] text-gray-900 ring-1 ring-black/10 hover:bg-black/8 dark:bg-white/5 dark:text-white dark:ring-white/10"
-                aria-label="Next testimonial"
-              >
-                Next
-              </button>
-              <button
-                id="testimonialsToggle"
-                type="button"
-                class="rounded-2xl bg-transparent px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-500 ring-1 ring-transparent hover:text-gray-800 hover:ring-black/10 dark:text-white/50 dark:hover:text-white dark:hover:ring-white/20"
-                aria-pressed="false"
-              >
-                Autoplay
-              </button>
-            </div>
+          <div class="flex items-center gap-2 text-xs text-gray-500" data-reveal>
+            <span class="sr-only">Scroll horizontally to view more founder signals.</span>
+          </div>
           </div>
 
           <div
             id="testimonialsTrack"
             class="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-6 pb-6 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
             data-reveal
+            aria-label="Founder testimonials"
+            role="list"
           >
             <article
               class="glass w-[86%] shrink-0 snap-center rounded-3xl p-7 md:w-[45%]"
               data-testimonial-card
               aria-label="Testimonial 1"
+              role="listitem"
             >
               <p class="text-pretty text-lg leading-relaxed text-gray-800 dark:text-white/80">
                 “We needed AI that could run inside our boundaries — not a black box SaaS. The deployment felt like infrastructure, not a demo.”
               </p>
               <p class="mt-5 text-xs font-semibold uppercase tracking-[0.26em] text-gray-600 dark:text-white/50">Founder, UAE</p>
             </article>
-            <article class="glass w-[86%] shrink-0 snap-center rounded-3xl p-7 md:w-[45%]" data-testimonial-card aria-label="Testimonial 2">
+            <article class="glass w-[86%] shrink-0 snap-center rounded-3xl p-7 md:w-[45%]" data-testimonial-card aria-label="Testimonial 2" role="listitem">
               <p class="text-pretty text-lg leading-relaxed text-gray-800 dark:text-white/80">
                 “The real value is operational: agents that ship workflows, not slide decks. Private by default was non‑negotiable.”
               </p>
               <p class="mt-5 text-xs font-semibold uppercase tracking-[0.26em] text-gray-600 dark:text-white/50">Ops Lead, Global</p>
             </article>
-            <article class="glass w-[86%] shrink-0 snap-center rounded-3xl p-7 md:w-[45%]" data-testimonial-card aria-label="Testimonial 3">
+            <article class="glass w-[86%] shrink-0 snap-center rounded-3xl p-7 md:w-[45%]" data-testimonial-card aria-label="Testimonial 3" role="listitem">
               <p class="text-pretty text-lg leading-relaxed text-gray-800 dark:text-white/80">
                 “We’ve worked with ‘AI vendors’ before. This felt like a partner who understands security, drift, and governance.”
               </p>
               <p class="mt-5 text-xs font-semibold uppercase tracking-[0.26em] text-gray-600 dark:text-white/50">CTO, MENA</p>
             </article>
           </div>
-
-          <div id="testimonialsDots" class="mt-2 flex items-center justify-center gap-2" aria-label="Testimonials navigation"></div>
         </div>
       </section>
 
