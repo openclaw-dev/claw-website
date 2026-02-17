@@ -143,11 +143,11 @@
 
           <div class="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row" data-reveal>
             <a href="#deployment" class="btn-primary" id="btn-deploy">Request Deployment</a>
-            <a href="https://wa.me/971585598906" class="btn-outline" id="btn-wa">WhatsApp Principal</a>
+            <a href="#faq" class="btn-outline" id="btn-wa">Talk to Principal</a>
           </div>
 
           <p class="mt-7 text-xs font-semibold uppercase tracking-[0.32em] text-gray-500 dark:text-white/50" id="hero-loc" data-reveal>
-            Dubai in-person + Remote Worldwide
+            Dubai in-person + Remote Worldwide · Private by design
           </p>
         </div>
       </section>
@@ -253,6 +253,18 @@
             </div>
           </div>
 
+          <div class="mt-10 flex flex-wrap items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-gray-600 dark:text-white/60" data-reveal>
+            <span class="rounded-full bg-black/5 px-4 py-2 text-xs text-gray-800 dark:bg-white/5 dark:text-white">
+              100% private cloud
+            </span>
+            <span class="rounded-full bg-black/5 px-4 py-2 text-xs text-gray-800 dark:bg-white/5 dark:text-white">
+              Hardware-locked agents
+            </span>
+            <span class="rounded-full bg-black/5 px-4 py-2 text-xs text-gray-800 dark:bg-white/5 dark:text-white">
+              No shared training data
+            </span>
+          </div>
+
           <div class="mt-12 grid gap-4 md:grid-cols-3" data-reveal>
             <!-- One-time -->
             <div class="rounded-3xl bg-white p-8 shadow-xl shadow-black/5 ring-1 ring-black/5 dark:bg-white/5 dark:shadow-black/20 dark:ring-white/10">
@@ -348,6 +360,14 @@
               >
                 Next
               </button>
+              <button
+                id="testimonialsToggle"
+                type="button"
+                class="rounded-2xl bg-transparent px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-gray-500 ring-1 ring-transparent hover:text-gray-800 hover:ring-black/10 dark:text-white/50 dark:hover:text-white dark:hover:ring-white/20"
+                aria-pressed="false"
+              >
+                Autoplay
+              </button>
             </div>
           </div>
 
@@ -429,6 +449,68 @@
               </ul>
               <a href="https://wa.me/971585598906" class="btn-secondary mt-8 w-full">Scale Care</a>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="scroll-mt-24 px-6 py-20 md:py-28">
+        <div class="mx-auto max-w-4xl">
+          <div class="text-center" data-reveal>
+            <h2 class="text-3xl font-semibold tracking-tight text-gray-950 dark:text-white">Questions from serious teams</h2>
+            <p class="mt-3 text-sm text-gray-600 dark:text-white/60">
+              A short protocol for founders and operators who need sovereign AI infrastructure, not another SaaS seat.
+            </p>
+          </div>
+
+          <div class="mt-10 space-y-4" data-reveal>
+            <details class="group rounded-2xl bg-black/3 p-4 ring-1 ring-black/5 open:bg-black/5 dark:bg-white/5 dark:ring-white/10 dark:open:bg-white/8">
+              <summary class="flex cursor-pointer items-center justify-between gap-3 text-left text-sm font-semibold text-gray-900 dark:text-white">
+                <span>Where does the AI actually run?</span>
+                <span class="text-xs text-gray-500 dark:text-white/50 group-open:hidden">Show</span>
+                <span class="hidden text-xs text-gray-500 dark:text-white/50 group-open:inline">Hide</span>
+              </summary>
+              <p class="mt-3 text-sm text-gray-600 dark:text-white/70">
+                We deploy into your cloud or hardware boundary. Models, vector stores, and orchestration live on your infrastructure, not on a
+                shared multi-tenant SaaS backend.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl bg-black/3 p-4 ring-1 ring-black/5 open:bg-black/5 dark:bg-white/5 dark:ring-white/10 dark:open:bg-white/8">
+              <summary class="flex cursor-pointer items-center justify-between gap-3 text-left text-sm font-semibold text-gray-900 dark:text-white">
+                <span>What data leaves our environment?</span>
+                <span class="text-xs text-gray-500 dark:text-white/50 group-open:hidden">Show</span>
+                <span class="hidden text-xs text-gray-500 dark:text-white/50 group-open:inline">Hide</span>
+              </summary>
+              <p class="mt-3 text-sm text-gray-600 dark:text-white/70">
+                By default, nothing. We design for zero external data exhaust: no training on your workloads, no shadow telemetry, and auditable
+                endpoints for every integration.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl bg-black/3 p-4 ring-1 ring-black/5 open:bg-black/5 dark:bg:white/5 dark:ring-white/10 dark:open:bg-white/8">
+              <summary class="flex cursor-pointer items-center justify-between gap-3 text-left text-sm font-semibold text-gray-900 dark:text-white">
+                <span>How fast can we get to first production agent?</span>
+                <span class="text-xs text-gray-500 dark:text:white/50 group-open:hidden">Show</span>
+                <span class="hidden text-xs text-gray-500 dark:text:white/50 group-open:inline">Hide</span>
+              </summary>
+              <p class="mt-3 text-sm text-gray-600 dark:text-white/70">
+                Typical deployments reach a hardened, live agent in 10–21 days, depending on your access to systems of record and security
+                review timelines.
+              </p>
+            </details>
+
+            <details class="group rounded-2xl bg-black/3 p-4 ring-1 ring-black/5 open:bg-black/5 dark:bg:white/5 dark:ring-white/10 dark:open:bg-white/8">
+              <summary class="flex cursor-pointer items-center justify-between gap-3 text-left text-sm font-semibold text-gray-900 dark:text:white">
+                <span>Who do we work with day-to-day?</span>
+                <span class="text-xs text-gray-500 dark:text:white/50 group-open:hidden">Show</span>
+                <span class="hidden text-xs text-gray-500 dark:text:white/50 group-open:inline">Hide</span>
+              </summary>
+              <p class="mt-3 text-sm text-gray-600 dark:text:white/70">
+                You work directly with the principal team—no agency hand-off. Strategy, design, and infrastructure decisions stay with a small,
+                accountable group.
+              </p>
+            </details>
           </div>
         </div>
       </section>

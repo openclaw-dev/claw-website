@@ -414,12 +414,18 @@
     const prev = document.getElementById("testimonialsPrev");
     const next = document.getElementById("testimonialsNext");
     const dots = document.getElementById("testimonialsDots");
+    const toggle = document.getElementById("testimonialsToggle");
     if (!track || !dots) return;
 
     const cards = $$("[data-testimonial-card]", track);
     if (cards.length === 0) return;
 
     let index = 0;
+    let autoplay = false;
+    const prefersReducedMotion =
+      typeof window !== "undefined" &&
+      "matchMedia" in window &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     const renderDots = () => {
       dots.innerHTML = cards
@@ -467,6 +473,46 @@
     );
 
     renderDots();
+
+    // Autoplay with accessible toggle, disabled when reduced motion is preferred
+    let intervalId = 0;
+    const updateToggleLabel = () => {
+      if (!toggle) return;
+      toggle.setAttribute("aria-pressed", autoplay ? "true" : "false");
+      toggle.textContent = autoplay ? "Autoplay on" : "Autoplay off";
+    };
+
+    const startAutoplay = () => {
+      if (prefersReducedMotion || autoplay || cards.length <= 1) return;
+      autoplay = true;
+      updateToggleLabel();
+      intervalId = window.setInterval(() => {
+        const nextIndex = (index + 1) % cards.length;
+        scrollTo(nextIndex);
+      }, 7000);
+    };
+
+    const stopAutoplay = () => {
+      autoplay = false;
+      updateToggleLabel();
+      if (intervalId) {
+        window.clearInterval(intervalId);
+        intervalId = 0;
+      }
+    };
+
+    if (toggle) {
+      toggle.addEventListener("click", () => {
+        if (autoplay) {
+          stopAutoplay();
+        } else {
+          startAutoplay();
+        }
+      });
+    }
+
+    // Start autoplay by default unless reduced motion is requested
+    if (!prefersReducedMotion) startAutoplay();
   }
 
   function initHeroParallax() {
